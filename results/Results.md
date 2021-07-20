@@ -1,7 +1,8 @@
 # Results
 
-Here you can find videos and frames of the testing set output by our network, as well as the individual results for each video of the testing set.
+Here you can find the frame-level and object level results.
 
+If you want to evaluate our results using other metrics, you can also download the videos and frames output by our network.
 
 ## Videos
 
@@ -24,7 +25,7 @@ These frames can be used as benchmarking with other approaches.
   <tr>
     <th>video</th>
     <th colspan="3">object-level</th>
-    <th colspan="3">frame level</th>
+    <th colspan="3">frame-level</th>
   </tr>
 </thead>
 <tbody>
