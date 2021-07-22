@@ -1,0 +1,42 @@
+{
+    "distance_module": {
+        "pairs": 1,
+        "gamma_bin_sigmoid": 10.0
+    },
+    "morphology_module": {
+        "max_radius": 20,
+        "type_kernel": "sigmoid",
+        "open": {
+            "se_gamma": 5.0,
+            "radius": 1.0,
+            "params_thresh": {
+                "function_thresh": "sigmoid",
+                "gamma": 10.0
+            },
+            "epsi": 0.08
+        },
+        "close": {
+            "se_gamma": 5.0,
+            "radius": 1.0,
+            "params_thresh": {
+                "function_thresh": "sigmoid",
+                "gamma": 5.0
+            },
+            "epsi": 0.08
+        }
+    },
+    "temporal_consistency_module": {
+        "type": "majority",
+        "max_frames": 15
+    },
+    "scale_module": {
+        "total_pixels": 11664,
+        "min": 0.0,
+        "max": 1.0
+    },
+    "classification_module": {
+        "function": "sigmoid",
+        "thresh": 0.2,
+        "gamma": 5000
+    }
+}
