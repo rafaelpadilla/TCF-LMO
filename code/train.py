@@ -15,18 +15,18 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torchvision.transforms as transforms
-import utils.utils_dataset as utils_dataset
-import utils.utils_functions as utils_functions
-import utils.utils_metrics as utils_metrics
-import utils.utils_tensorboard as tb_utils
 from lmdb_ds import LMDBDataset
-from net_DM_TCM_MM_CM import Platannet as model_DM_TCM_MM_CM
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 from VDAO_Access.utils import add_bb_into_image
 from VDAO_folds.lib.My_Resnet50_reduced import Resnet50_Reduced
 
+import utils.utils_dataset as utils_dataset
+import utils.utils_functions as utils_functions
+import utils.utils_metrics as utils_metrics
+import utils.utils_tensorboard as tb_utils
 from net_DM_MM_TCM_CM import Platannet as model_DM_MM_TCM_CM
+from net_DM_TCM_MM_CM import Platannet as model_DM_TCM_MM_CM
 
 
 def print_info(text, log_path):
@@ -845,4 +845,17 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    main(fold=1,
+         batch_size=14,
+         net='DM_MM_TCM_CM',
+         name_experiment='testando123',
+         epochs=100,
+         device=0,
+         seed=123,
+         init_params_file=
+         '/home/rafael.padilla/thesis/cnn_morphology/full_pipeline/init_params_train.json',
+         tb_params_file='/home/rafael.padilla/thesis/cnn_morphology/full_pipeline/tb_params.json',
+         perform_validation=True,
+         run_once_without_training=False,
+         continue_from=None)
