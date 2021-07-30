@@ -19,3 +19,7 @@ Use the argument `--net` to train the pipeline with modules placed in different 
 
 Check all possible arguments with the command `python train.py --help`
 
+## Testing
+
+You can download the **pre-trained** models from here:
+https://drive.google.com/drive/folders/1-ExzI5REX-Hht-SixjsLJHPZ1S1zpR5y?usp=sharing
