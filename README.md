@@ -7,6 +7,11 @@ Anomaly Detection Network is a network made with dedicated modules to process fr
 * Temporal Consistency Module (TCM)
 * Classification Module (CM)
 
+## Requirements
+
+If you use conda/anaconda, use the file environment.yml to install the needed packages to run the network:
+`conda env create -f environment.yml`
+
 ## Training
 
 Use the command below to train the network:
