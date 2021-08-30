@@ -2,10 +2,31 @@
 Anomaly Detection Network is a network made with dedicated modules to process frames and identify the presence of anomalies.
 
 * Overview
-* Dissimilarity Module (DM)
-* Differential Morphology Module (MM)
-* Temporal Consistency Module (TCM)
-* Classification Module (CM)
+  * Dissimilarity Module (DM)
+  * Differential Morphology Module (MM)
+  * Temporal Consistency Module (TCM)
+  * Classification Module (CM)
+* Requirements
+* Training
+* Testing 
+* Results
+
+
+## Overview
+The anomaly detection network consists of five modules as illustrated below:
+
+<!--- IOU --->
+<p align="center">
+<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_outputs_v3.png?raw=true" align="center"/></p>
+
+Where: 
+
+(a) aligned reference frame  
+(b) target frame (where the anomaly is present)  
+(c) output of the dissimilarity module (DM)  
+(d) output of the temporal consistency module (TCM)  
+(e) eroded version of (d) computed by differentiable morphology module (MM)  
+(f) eroded version of (e) computed by differentiable morphology module (MM)  
 
 ## Requirements
 
