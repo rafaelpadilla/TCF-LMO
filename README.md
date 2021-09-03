@@ -17,7 +17,7 @@ The anomaly detection network consists of five modules as illustrated below:
 
 <!--- IOU --->
 <p align="center">
-<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_outputs_v3.png?raw=true" align="center"/></p>
+<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_outputs.png?raw=true" align="center"/></p>
 
 Where: 
 
@@ -27,6 +27,36 @@ Where:
 (d) output of the temporal consistency module (TCM)  
 (e) eroded version of (d) computed by differentiable morphology module (MM)  
 (f) eroded version of (e) computed by differentiable morphology module (MM)  
+
+
+### Dissimilarity Module (DM)
+<details>
+<summary>Click to expand</summary>
+
+<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_DM.png?raw=true" align="center"/></p>
+</details>
+
+### Differential Morphology Module (MM)
+<details>
+<summary>Click to expand</summary>
+
+<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_MM.png?raw=true" align="center"/></p>
+</details>
+
+### Temporal Consistency Module (TCM)
+<details>
+<summary>Click to expand</summary>
+
+<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_TCM.png?raw=true" align="center"/></p>
+</details>
+
+### Classification Module (CM)
+<details>
+<summary>Click to expand</summary>
+
+<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_CM.png?raw=true" align="center"/></p>
+</details>
+
 
 ## Requirements
 
