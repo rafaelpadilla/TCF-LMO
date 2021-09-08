@@ -1,4 +1,4 @@
-# Anomaly Detection Network
+# Anomaly Detection in Moving-Camera Videos Using Deep-Learning Networks and Fully Differentiable Morphological Operations (DL-DMO)
 Anomaly Detection Network is a network made with dedicated modules to process frames and identify the presence of anomalies.
 
 * Overview
@@ -62,6 +62,14 @@ Where:
 
 If you use conda/anaconda, use the file environment.yml to install the needed packages to run the network:
 `conda env create -f environment.yml`
+
+## Download dataset
+
+Download the pre-aligned frames using the command:
+
+`ABC`
+
+Optional: You can download the full not aligned videos from the VDAO official web site: [Training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) [Testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html). 
 
 ## Training
 
