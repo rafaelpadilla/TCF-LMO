@@ -67,9 +67,13 @@ If you use conda/anaconda, use the file environment.yml to install the needed pa
 
 Download the pre-aligned frames using the command:
 
-`ABC`
+`ABC.sh`
 
 Optional: You can download the full not aligned videos from the VDAO official web site: [Training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) [Testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html). 
+
+## Inform path where the dataset is
+
+Mudar os caminhos do arquivo definitions.py
 
 ## Training
 
