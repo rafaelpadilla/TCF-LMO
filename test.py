@@ -460,7 +460,7 @@ def evaluate_model(model_path,
 
 @click.command()
 @click.option('--fold', default=1, help='Fold number.', type=click.IntRange(1, 9, clamp=False))
-@click.option('--device', default=0, help='GPU device.', type=click.INT)
+@click.option('--device', default=None, help='GPU device.', type=click.INT)
 @click.option('--seed',
               default=123,
               help='Random seed to achieve achieve reproducible results.',
@@ -533,14 +533,18 @@ def main(fold, dir_pth, fp_pkl, net, fps, quality, dir_out, alignment, device, s
 
     # Set device
     print_info(f'Attempt to run on device: {device}', log_path)
-    if torch.cuda.is_available():
+    if device is not None and torch.cuda.is_available():
         try:
             device = torch.device(f'cuda:{device}')
             torch.cuda.set_device(device)
         except:
             print_info(f'{device} not found', log_path)
-            device = 'cpu'
-            torch.device('cpu')
+            device = torch.device('cpu')
+
+    else:
+        print_info(f'{device} not found', log_path)
+        device = torch.device('cpu')
+
     print_info(f'Running on {device}', log_path, end_block=True)
 
     # Load the results.pickle file in the directory

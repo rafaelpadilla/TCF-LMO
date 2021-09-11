@@ -5,18 +5,15 @@ import cv2
 import lmdb
 import numpy as np
 import torch
+from paths_definitions import (
+    DIR_GEOMETRIC_TRAIN_LMDB,
+    DIR_GEOMETRIC_VAL_TEST_LMDB,
+    DIR_TEMPORAL_TRAIN_LMDB,
+    DIR_TEMPORAL_VAL_TEST_LMDB,
+)
 from torch.utils.data import Dataset
 
 from .utils import utils_dataset as utils_dataset
-
-# Change here the path of the dataset
-base_dir_geo_align_lmdb = '/nfs/proc/rafael.padilla/geo_align_lmdb'
-DIR_GEOMETRIC_TRAIN_LMDB = os.path.join(base_dir_geo_align_lmdb, 'geo_align_train_lmdb')
-DIR_GEOMETRIC_VAL_TEST_LMDB = os.path.join(base_dir_geo_align_lmdb, 'geo_align_val_test_lmdb')
-base_dir_temporal_align_lmdb = '/nfs/proc/rafael.padilla/temporal_align_lmdb'
-DIR_TEMPORAL_TRAIN_LMDB = os.path.join(base_dir_temporal_align_lmdb, 'temporal_align_train_lmdb')
-DIR_TEMPORAL_VAL_TEST_LMDB = os.path.join(base_dir_temporal_align_lmdb,
-                                          'temporal_align_val_test_lmdb')
 
 
 class LMDBDataset(Dataset):
@@ -50,6 +47,7 @@ class LMDBDataset(Dataset):
             self.lmdb_path = DIR_GEOMETRIC_TRAIN_LMDB if type_dataset == 'train' else DIR_GEOMETRIC_VAL_TEST_LMDB
         elif alignment == 'temporal':
             self.lmdb_path = DIR_TEMPORAL_TRAIN_LMDB if type_dataset == 'train' else DIR_TEMPORAL_VAL_TEST_LMDB
+        print(self.lmdb_path)
         assert os.path.isdir(self.lmdb_path)
         assert load_mode in ['block', 'keyframe']
 
