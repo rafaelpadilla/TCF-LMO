@@ -15,7 +15,7 @@ Anomaly Detection Network is a network made with dedicated modules to process fr
 ## Overview
 The anomaly detection network consists of five modules as illustrated below:
 
-<!--- IOU --->
+<!--- scheme --->
 <p align="center">
 <img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_outputs.png?raw=true" align="center"/></p>
 
@@ -73,7 +73,8 @@ Optional: You can download the full not aligned videos from the VDAO official we
 
 ## Inform path where the dataset is
 
-Mudar os caminhos do arquivo definitions.py
+Mudar os caminhos do arquivo paths_definitions.py
+
 
 ## Training
 
