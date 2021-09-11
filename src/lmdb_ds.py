@@ -1,0 +1,129 @@
+import os
+import pickle
+
+import cv2
+import lmdb
+import numpy as np
+import torch
+from torch.utils.data import Dataset
+
+from .utils import utils_dataset as utils_dataset
+
+# Change here the path of the dataset
+base_dir_geo_align_lmdb = '/nfs/proc/rafael.padilla/geo_align_lmdb'
+DIR_GEOMETRIC_TRAIN_LMDB = os.path.join(base_dir_geo_align_lmdb, 'geo_align_train_lmdb')
+DIR_GEOMETRIC_VAL_TEST_LMDB = os.path.join(base_dir_geo_align_lmdb, 'geo_align_val_test_lmdb')
+base_dir_temporal_align_lmdb = '/nfs/proc/rafael.padilla/temporal_align_lmdb'
+DIR_TEMPORAL_TRAIN_LMDB = os.path.join(base_dir_temporal_align_lmdb, 'temporal_align_train_lmdb')
+DIR_TEMPORAL_VAL_TEST_LMDB = os.path.join(base_dir_temporal_align_lmdb,
+                                          'temporal_align_val_test_lmdb')
+
+
+class LMDBDataset(Dataset):
+    def __init__(self,
+                 fold_number,
+                 type_dataset,
+                 load_mode,
+                 transformations=None,
+                 balance=False,
+                 max_samples=None,
+                 create_empty=False,
+                 alignment='geometric'):
+
+        if create_empty:
+            self.lmdb_path = ''
+            self.type_dataset = None
+            self.fold_number = None
+            self.transformations = None
+            self.load_mode = None
+            self.keys_ds = []
+            self.db = None
+            self.half_window_size = None
+            return
+
+        self.db = None  # lazy init db for pickle
+
+        # LMDB é um diretório
+        assert type_dataset in ['train', 'validation', 'test']
+        assert alignment in ['geometric', 'temporal']
+        if alignment == 'geometric':
+            self.lmdb_path = DIR_GEOMETRIC_TRAIN_LMDB if type_dataset == 'train' else DIR_GEOMETRIC_VAL_TEST_LMDB
+        elif alignment == 'temporal':
+            self.lmdb_path = DIR_TEMPORAL_TRAIN_LMDB if type_dataset == 'train' else DIR_TEMPORAL_VAL_TEST_LMDB
+        assert os.path.isdir(self.lmdb_path)
+        assert load_mode in ['block', 'keyframe']
+
+        # Se for train e load_mode=>'keyframe', janela central )half_window_size) é o frame do meio do batch (7)
+        # Se for train e load_mode=>'block', não se usa janela central (half_window_size)
+        # Se for val ou teste, load_mode=>'keyframe' cada batch tem 1 imagem :. janela central (half_window_size) é o próprio frame único
+        self.half_window_size = 7 if type_dataset == 'train' else 0
+
+        self.type_dataset = type_dataset
+        self.fold_number = fold_number
+        self.transformations = transformations
+        self.load_mode = load_mode
+
+        # load auxiliary data only
+        self.keys_ds = utils_dataset.get_keys_lmdb(fold_number,
+                                                   lmdb_path=self.lmdb_path,
+                                                   type_dataset=type_dataset)
+        if balance:
+            self.keys_ds = utils_dataset.balance_reduce_shuffle_keys_lmdb(self.keys_ds, max_samples)
+
+    def decode(self, data):
+        data = pickle.loads(data)
+        refs = np.array([cv2.imdecode(ref, cv2.IMREAD_UNCHANGED) for ref in data["refs"]])
+        tars = np.array([cv2.imdecode(tar, cv2.IMREAD_UNCHANGED) for tar in data["tars"]])
+        bboxes = data["bboxes"]
+        classes = data["classes"]
+        return refs, tars, bboxes, classes
+
+    def __len__(self):
+        return len(self.keys_ds)  # batches
+
+    def __getitem__(self, idx):
+        if self.db is None:
+            self.db = lmdb.open(self.lmdb_path, readonly=True, lock=False)
+
+        key = self.keys_ds[idx]['lmdb_key']
+        # print(idx)
+
+        with self.db.begin(write=False) as tx:
+            buff = tx.get(key)
+
+        ref, tar, bboxes, classes = self.decode(buff)
+        # Aplica transformações
+        ref = torch.stack([self.transformations(r) for r in ref])
+        tar = torch.stack([self.transformations(t) for t in tar])
+        # Fica somente com os frames de acordo com o load_mode
+        if self.load_mode == 'keyframe':
+            # Obtém apenas o frame central (half_window_size)
+            ref = ref[self.half_window_size]
+            tar = tar[self.half_window_size]
+            bboxes = bboxes[self.half_window_size]
+            classes = classes[self.half_window_size]
+            assert classes == self.keys_ds[idx]['class_keyframe']
+            return ref, tar, classes, bboxes
+        # Se for modo 'block', pega todos os frames do bloco
+        elif self.load_mode == 'block':
+            return ref, tar, classes, bboxes
+
+    def clone(self):
+        ret = LMDBDataset.create_empty()
+        ret.lmdb_path = self.lmdb_path
+        ret.type_dataset = self.type_dataset
+        ret.type_dataset = self.type_dataset
+        ret.fold_number = self.fold_number
+        ret.load_mode = self.load_mode
+        ret.transformations = self.transformations
+        ret.keys_ds = self.keys_ds
+        ret.db = self.db
+        ret.half_window_size = self.half_window_size
+        return ret
+
+    def get_objects(self):
+        return list(set([el['object'] for el in self.keys_ds]))
+
+    @staticmethod
+    def create_empty():
+        return LMDBDataset('', '', '', create_empty=True)
