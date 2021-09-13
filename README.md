@@ -95,10 +95,21 @@ Check all possible arguments with the command `python train.py --help`
 
 ## Results
 
+Our results are compared against previous works in the same database using the true positive rate (TPR), false positve rate (FPR) and DIS, which is the minimum distance of an operating point to the point of ideal behaviour of a ROC curve, as illustrated below
+
+<p align="center">
+<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/ROC_curve.png?raw=true" align="center"/></p>
+
+The DIS is computed as:
+
+<p align="center">
+<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/eq_DIS.png?raw=true" align="center"/></p>
+
 ### Frame-level
 
 <p align="center">
 <img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/table_results_frame_level.png?raw=true" align="center"/></p>
 
 ### Object-level
+<p align="center">
 <img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/table_results_object_level.png?raw=true" align="center"/></p>
