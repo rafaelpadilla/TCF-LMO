@@ -17,7 +17,7 @@ The anomaly detection network consists of five modules as illustrated below:
 
 <!--- scheme --->
 <p align="center">
-<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_outputs.png?raw=true" align="center"/></p>
+<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/pipeline_outputs.png?raw=true" align="center"/></p>
 
 Where: 
 
@@ -33,21 +33,21 @@ Where:
 <details>
 <summary>Click to expand</summary>
 
-<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_DM.png?raw=true" align="center"/></p>
+<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/pipeline_DM.png?raw=true" align="center"/></p>
 </details>
 
 ### Differential Morphology Module (MM)
 <details>
 <summary>Click to expand</summary>
 
-<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_MM.png?raw=true" align="center"/></p>
+<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/pipeline_MM.png?raw=true" align="center"/></p>
 </details>
 
 ### Temporal Consistency Module (TCM)
 <details>
 <summary>Click to expand</summary>
 
-<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_TCM.png?raw=true" align="center"/></p>
+<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/pipeline_TCM.png?raw=true" align="center"/></p>
 </details>
 
 ### Classification Module (CM)
@@ -63,13 +63,9 @@ Where:
 If you use conda/anaconda, use the file environment.yml to install the needed packages to run the network:
 `conda env create -f environment.yml`
 
-## Download dataset
+## Download full dataset [optional]
 
-Download the pre-aligned frames using the command:
-
-`ABC.sh`
-
-Optional: You can download the full not aligned videos from the VDAO official web site: [Training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) [Testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html). 
+You can download the full **not aligned** videos from the VDAO official web site: [Training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) [Testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html). 
 
 ## Inform path where the dataset is
 
@@ -78,20 +74,31 @@ Mudar os caminhos do arquivo paths_definitions.py
 
 ## Training
 
-Use the command below to train the network:
+Use the commands below to download and train the network:
 
-`python train.py --fold 1 --net DM_MM_TCM_CM`
+**1. Download the aligned dataset for training:** `sh download_training_dataset.sh` TODO 
 
-Use the argument `--fold` to select which fold to train (options: `--fold 1`, `--fold 2`, `--fold 3`, `--fold 4`, `--fold 5`, `--fold 6`, `--fold 7`, `--fold 8`, `--fold 9`).
+**2. Download the aligned dataset for validation/testing:** `sh download_testing_dataset.sh`
 
-Use the argument `--net` to train the pipeline with modules placed in different orders (options: `--net  DM_MM_TCM_CM`, `--net DM_TCM_MM_CM`).
+**3. Command to train the network:** `python train.py --fold 1 --net DM_MM_TCM_CM`
+
+*Notice:*  
+Use the argument `--fold` to select which fold to train (options: `--fold 1`, `--fold 2`, `--fold 3`, `--fold 4`, `--fold 5`, `--fold 6`, `--fold 7`, `--fold 8`, `--fold 9`).  
+Use the argument `--net` to train the pipeline with modules placed in different orders (options: `--net  DM_MM_TCM_CM`, `--net DM_TCM_MM_CM`).  
 
 Check all possible arguments with the command `python train.py --help`
 
 ## Testing
 
-You can download the **pre-trained** models from here:
-https://drive.google.com/drive/folders/1-ExzI5REX-Hht-SixjsLJHPZ1S1zpR5y?usp=sharing
+**1. Download the aligned dataset for testing:** `sh download_testing_dataset.sh`  
+**2. Command to evaluate the network:** `sh evaluate.sh`
 
 ## Results
 
+### Frame-level
+
+<p align="center">
+<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/table_results_frame_level.png?raw=true" align="center"/></p>
+
+### Object-level
+<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/table_results_object_level.png?raw=true" align="center"/></p>
