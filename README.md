@@ -100,7 +100,7 @@ Our results are compared against previous works in the same database using the t
 <p align="center">
 <img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/ROC_curve.png?raw=true" align="center"/></p>
 
-Thus, **the closer to 0, the better the DIS is**. And it is computed as:
+The best value is obtained when TPR=1 and FPR=0 resulting in a DIS=0, which represents the best possible classification. And it is computed as:
 
 <p align="center">
 <img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/eq_DIS.png?raw=true" align="center"/></p>
