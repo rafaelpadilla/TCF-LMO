@@ -39,7 +39,7 @@ If you use conda/anaconda, use the file environment.yml to install the needed pa
 
 You can train the model from scratch, or use the pretrained model to evaluate the VDAO testing videos.
 
-Optionally, you could download the full **not aligned** videos from the VDAO official web site: [Training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) [Testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html), use alternative alignment/registration techniques and train the DN-LMO model.
+Optionally, you could download the full **not aligned** videos from the VDAO official web site: [training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) and [testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html).Thus, you could apply alternative alignment/registration techniques and train the DN-LMO model.
 
 ### A. (Optional) Train the model from scratch:
 
@@ -47,13 +47,14 @@ Use the commands below to download the datasets (training + validation) and trai
 
 **1. Download the aligned dataset for training:** `sh download_training_dataset.sh`    
 **2. Download the aligned dataset for validation:** `sh download_testing_dataset.sh`  
-**3. Command to train the network:** `python train.py --fold 1 --net DM_MM_TCM_CM`  
+**3. Train the network:** `python train.py --fold 1 --net DM_MM_TCM_CM`  
 *Notice:* Use the argument `--fold` to select which fold to train (options: `--fold 1`, `--fold 2`, `--fold 3`, `--fold 4`, `--fold 5`, `--fold 6`, `--fold 7`, `--fold 8`, `--fold 9`).
 
 ### B. Testing
 
 **1. Download the aligned dataset for testing:** `sh download_testing_dataset.sh`  
-**2. Command to evaluate the network:** `sh evaluate.sh`
+**2. Download the pretrained model:** `sh download_pretrained.sh`  
+**3. Evaluate the network:** `sh evaluate.sh`
 
 ## Results
 
