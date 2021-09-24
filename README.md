@@ -2,15 +2,15 @@
 Anomaly Detection Network is a network made with dedicated modules to process frames and identify the presence of anomalies.
 
 * Overview
-  * Dissimilarity Module (DM)
-  * Differential Morphology Module (MM)
-  * Temporal Consistency Module (TCM)
-  * Classification Module (CM)
 * Requirements
 * Training
 * Testing 
 * Results
-
+   * Metrics
+   * Frame-level results 
+   * Object-level results 
+* Acknowledgement
+  
 
 ## Overview
 The anomaly detection network consists of five modules as illustrated below:
@@ -28,72 +28,39 @@ Where:
 (e) eroded version of (d) computed by differentiable morphology module (MM)  
 (f) eroded version of (e) computed by differentiable morphology module (MM)  
 
-
-### Dissimilarity Module (DM)
-<details>
-<summary>Click to expand</summary>
-
-<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/pipeline_DM.png?raw=true" align="center"/></p>
-</details>
-
-### Differential Morphology Module (MM)
-<details>
-<summary>Click to expand</summary>
-
-<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/pipeline_MM.png?raw=true" align="center"/></p>
-</details>
-
-### Temporal Consistency Module (TCM)
-<details>
-<summary>Click to expand</summary>
-
-<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/pipeline_TCM.png?raw=true" align="center"/></p>
-</details>
-
-### Classification Module (CM)
-<details>
-<summary>Click to expand</summary>
-
-<img src="https://github.com/rafaelpadilla/differentiable-anomaly-detection-pipeline/blob/main/aux_imgs/pipeline_CM.png?raw=true" align="center"/></p>
-</details>
-
-
 ## Requirements
+
+### Installing packages and libraries:
 
 If you use conda/anaconda, use the file environment.yml to install the needed packages to run the network:
 `conda env create -f environment.yml`
 
-## Download full dataset [optional]
+## Replicating our results
 
-You can download the full **not aligned** videos from the VDAO official web site: [Training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) [Testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html). 
+You can train the model from scratch, or use the pretrained model to evaluate the VDAO testing videos.
 
-## Inform path where the dataset is
+Optionally, you could download the full **not aligned** videos from the VDAO official web site: [Training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) [Testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html), use alternative alignment/registration techniques and train the DN-LMO model.
 
-Mudar os caminhos do arquivo paths_definitions.py
+### A. (Optional) Train the model from scratch:
 
+Use the commands below to download the datasets (training + validation) and train the network:
 
-## Training
+**1. Download the aligned dataset for training:** `sh download_training_dataset.sh`    
+**2. Download the aligned dataset for validation:** `sh download_testing_dataset.sh`  
+**3. Command to train the network:** `python train.py --fold 1 --net DM_MM_TCM_CM`  
+*Notice:* Use the argument `--fold` to select which fold to train (options: `--fold 1`, `--fold 2`, `--fold 3`, `--fold 4`, `--fold 5`, `--fold 6`, `--fold 7`, `--fold 8`, `--fold 9`).
 
-Use the commands below to download and train the network:
-
-**1. Download the aligned dataset for training:** `sh download_training_dataset.sh` TODO 
-
-**2. Download the aligned dataset for validation/testing:** `sh download_testing_dataset.sh`
-
-**3. Command to train the network:** `python train.py --fold 1 --net DM_MM_TCM_CM`
-
-*Notice:*  
-Use the argument `--fold` to select which fold to train (options: `--fold 1`, `--fold 2`, `--fold 3`, `--fold 4`, `--fold 5`, `--fold 6`, `--fold 7`, `--fold 8`, `--fold 9`).  
-Use the argument `--net` to train the pipeline with modules placed in different orders (options: `--net  DM_MM_TCM_CM`, `--net DM_TCM_MM_CM`).  
-
-Check all possible arguments with the command `python train.py --help`
-
-## Testing
+### B. Testing
 
 **1. Download the aligned dataset for testing:** `sh download_testing_dataset.sh`  
 **2. Command to evaluate the network:** `sh evaluate.sh`
 
 ## Results
+
+### Metrics
+
+<details>
+<summary>Click to expand</summary>
 
 Our results are compared against previous works in the same database using the true positive rate (TPR), false positve rate (FPR) and DIS, which is the minimum distance of an operating point to the point of ideal behaviour of a ROC curve, as illustrated below
 
@@ -105,11 +72,151 @@ The best value is obtained when TPR=1 and FPR=0 resulting in a DIS=0, which repr
 <p align="center">
 <img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/eq_DIS.png?raw=true" align="center"/></p>
 
-### Frame-level
+ </details>
 
-<p align="center">
-<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/table_results_frame_level.png?raw=true" align="center"/></p>
+### Frame-level results 
 
-### Object-level
-<p align="center">
-<img src="https://github.com/rafaelpadilla/dl-smo/blob/main/aux_imgs/table_results_object_level.png?raw=true" align="center"/></p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2"></th>
+    <th colspan="3">average</th>
+    <th colspan="3">overall</th>
+  </tr>
+  <tr>
+    <th>TPR</th>
+    <th>FPR</th>
+    <th>DIS</th>
+    <th>TPR</th>
+    <th>FPR</th>
+    <th>DIS</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>DAOMC</td>
+    <td>0.88</td>
+    <td>0.39</td>
+    <td>0.49</td>
+    <td>0.89</td>
+    <td>0.42</td>
+    <td>0.43</td>
+  </tr>
+  <tr>
+    <td>ADMULT</td>
+    <td>0.76</td>
+    <td>0.36</td>
+    <td>0.59</td>
+    <td>0.78</td>
+    <td>0.39</td>
+    <td>0.44</td>
+  </tr>
+  <tr>
+    <td>MCBS</td>
+    <td>1.00</td>
+    <td>0.83</td>
+    <td>0.83</td>
+    <td>1.00</td>
+    <td>0.98</td>
+    <td>0.98</td>
+  </tr>
+  <tr>
+    <td>mcDTSR</td>
+    <td>0.88</td>
+    <td>0.25</td>
+    <td>0.36</td>
+    <td>0.88</td>
+    <td>0.28</td>
+    <td>0.30</td>
+  </tr>
+  <tr>
+    <td>CNN+RF</td>
+    <td>0.74</td>
+    <td>0.25</td>
+    <td>0.48</td>
+    <td>0.75</td>
+    <td>0.27</td>
+    <td>0.37</td>
+  </tr>
+  <tr>
+    <td><b>DL-DMO (ours)</td>
+    <td>0.85</td>
+    <td><b>0.18</b></td>
+    <td><b>0.33</b></td>
+    <td>0.86</td>
+    <td><b>0.21</b></td>
+    <td><b>0.25</b></td>
+  </tr>
+</tbody>
+</table>
+
+### Object-level results
+  
+<table>
+<thead>
+  <tr>
+    <th rowspan="2"></th>
+    <th colspan="3">average</th>
+    <th colspan="3">overall</th>
+  </tr>
+  <tr>
+    <th>TPR</th>
+    <th>FPR</th>
+    <th>DIS</th>
+    <th>TPR</th>
+    <th>FPR</th>
+    <th>DIS</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>DAOMC</td>
+    <td>0.81</td>
+    <td>0.42</td>
+    <td>0.53</td>
+    <td>0.82</td>
+    <td>0.42</td>
+    <td>0.45</td>
+  </tr>
+  <tr>
+    <td>ADMULT</td>
+    <td>0.70</td>
+    <td>0.29</td>
+    <td>0.54</td>
+    <td>0.72</td>
+    <td>0.29</td>
+    <td>0.40</td>
+  </tr>
+  <tr>
+    <td>MCBS</td>
+    <td>0.88</td>
+    <td>0.83</td>
+    <td>0.86</td>
+    <td>0.89</td>
+    <td>0.83</td>
+    <td>0.84</td>
+  </tr>
+  <tr>
+    <td>mcDTSR</td>
+    <td>0.86</td>
+    <td>0.29</td>
+    <td>0.39</td>
+    <td>0.86</td>
+    <td>0.29</td>
+    <td>0.32</td>
+  </tr>
+  <tr>
+    <td><b>DL-DMO (ours)</b></td>
+    <td>0.85</td>
+    <td><b>0.22</b></td>
+    <td><b>0.35</b></td>
+    <td>0.86</td>
+    <td><b>0.22</b></td>
+   <td><b>0.26</b></b></td>
+  </tr>
+</tbody>
+</table>
+
+## Acknowledgement
+
+Most of the experimental results reported in this work wereobtained with a Titan X Pascal board gently donated by the NVIDIA Corporation.
