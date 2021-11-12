@@ -5,13 +5,14 @@ import cv2
 import lmdb
 import numpy as np
 import torch
-from paths_definitions import (
+from torch.utils.data import Dataset
+
+from .paths_definitions import (
     DIR_GEOMETRIC_TRAIN_LMDB,
     DIR_GEOMETRIC_VAL_TEST_LMDB,
     DIR_TEMPORAL_TRAIN_LMDB,
     DIR_TEMPORAL_VAL_TEST_LMDB,
 )
-from torch.utils.data import Dataset
 
 from .utils import utils_dataset as utils_dataset
 
