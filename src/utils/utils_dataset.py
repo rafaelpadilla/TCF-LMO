@@ -1,56 +1,13 @@
 # Dataset to load frames aligned geometricaly
 
-import json
 import os
 import pickle
 import random
-import socket
 
 import lmdb
 
 from .utils_functions import get_files_recursively
 from .VDAO_folds.hdf5dataset_v2 import HDF5Dataset
-from .VDAO_folds.utils import target_objects as all_objects
-
-hostname = socket.gethostname()
-if 'notesmt' in hostname:
-    # base_dir_read = '/media/storage/VDAO/amostras_frames/fold1/geometric_alignment/'
-    # DIR_FRAMES_TRAIN = os.path.join(base_dir_read, 'training_set')
-    # DIR_FRAMES_VAL_TEST = os.path.join(base_dir_read, 'testing_set')
-    # base_dir_save_torch = '/media/storage/VDAO/amostras_frames/base_torch'
-    # DIR_TO_SAVE_TRAIN_TORCH_FILES = os.path.join(base_dir_save_torch, 'geo_align_train_torch')
-    # DIR_TO_SAVE_VAL_TEST_TORCH_FILES = os.path.join(base_dir_save_torch, 'geo_align_val_test_torch')
-    base_dir_lmdb = '/media/storage/VDAO/amostras_frames/'
-    DIR_TO_SAVE_TRAIN_LMDB_GEOMETRIC = os.path.join(base_dir_lmdb, 'geo_align_lmdb',
-                                                    'geo_align_train_lmdb')
-    DIR_TO_SAVE_VAL_TEST_LMDB_GEOMETRIC = os.path.join(base_dir_lmdb, 'geo_align_lmdb',
-                                                       'geo_align_val_test_lmdb')
-
-    DIR_TO_SAVE_TRAIN_LMDB_TEMPORAL = os.path.join(base_dir_lmdb, '?????')
-    DIR_TO_SAVE_VAL_TEST_LMDB_TEMPORAL = os.path.join(base_dir_lmdb, '????')
-
-elif 'smt' in hostname:
-    # base_dir_read = '/home/rafael.padilla/workspace/rafael.padilla/hdf5_files/'
-    # DIR_FRAMES_TRAIN = os.path.join(base_dir_read, 'geo_align_train_vids')
-    # DIR_FRAMES_VAL_TEST = os.path.join(base_dir_read, 'geo_align_test_val_vids')
-    # base_dir_save_torch = '/nfs/proc/rafael.padilla/geo_align/'
-    # DIR_TO_SAVE_TRAIN_TORCH_FILES = os.path.join(base_dir_save_torch, 'geo_align_train_torch')
-    # DIR_TO_SAVE_VAL_TEST_TORCH_FILES = os.path.join(base_dir_save_torch, 'geo_align_val_test_torch')
-    base_dir_lmdb = '/nfs/proc/rafael.padilla/'
-    DIR_TO_SAVE_TRAIN_LMDB_GEOMETRIC = os.path.join(base_dir_lmdb, 'geo_align_lmdb',
-                                                    'geo_align_train_lmdb')
-    DIR_TO_SAVE_VAL_TEST_LMDB_GEOMETRIC = os.path.join(base_dir_lmdb, 'geo_align_lmdb',
-                                                       'geo_align_val_test_lmdb')
-
-    DIR_TO_SAVE_TRAIN_LMDB_TEMPORAL = os.path.join(base_dir_lmdb, 'temporal_align_lmdb',
-                                                   '_temporal_align_train_lmdb')
-    DIR_TO_SAVE_VAL_TEST_LMDB_TEMPORAL = os.path.join(base_dir_lmdb, 'temporal_align_lmdb',
-                                                      'temporal_align_val_test_lmdb')
-else:
-    raise Exception('hostname not configured')
-
-PATH_JSON_OBJECT = '/nfs/home/rafael.padilla/thesis/VDAO_folds/lib/vdao_object.json'
-PATH_JSON_RESEARCH = '/nfs/home/rafael.padilla/thesis/VDAO_folds/lib/vdao_research.json'
 
 objects_folds_prop_5_3 = {
     1: {

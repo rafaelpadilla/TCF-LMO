@@ -18,7 +18,7 @@ import torch
 from PIL import Image
 from torch.utils import data
 
-from .utils import get_files
+from ..utils_functions import get_files
 
 
 class HDF5Dataset(data.Dataset):

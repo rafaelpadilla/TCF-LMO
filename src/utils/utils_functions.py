@@ -114,6 +114,26 @@ def get_files_recursively(directory, extension="*"):
     return ret
 
 
+def get_files(directory, extension="*", recursive=True):
+    if '.' not in extension:
+        extension = '*.' + extension
+    if recursive:
+        files_ret = [
+            os.path.join(dirpath, f) for dirpath, dirnames, files in os.walk(directory)
+            for f in fnmatch.filter(files, extension)
+        ]
+    else:
+        files_ret = []
+        for dirpath, dirnames, files in os.walk(directory):
+            for f in fnmatch.filter(files, extension):
+                files_ret.append(os.path.join(dirpath, f))
+            break
+
+    # Disconsider hidden files, such as .DS_Store in the MAC OS
+    ret = [f for f in files_ret if not os.path.basename(f).startswith('.')]
+    return ret
+
+
 def unnormalize(img, transf_std, transf_mean, one_channel=False):
     if one_channel:
         transf_std = [transf_std]
