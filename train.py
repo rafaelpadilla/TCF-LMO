@@ -117,12 +117,11 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
     tensorboard_params = json.load(open(tb_params_file, 'r'))
 
     if continue_from is not None:
-        log_dir = os.path.split(continue_from)[0]
         run_once_without_training = False
     else:
         if name_experiment is None:
             name_experiment = f'training_fold_{fold}'
-        log_dir = os.path.join('training_logs', name_experiment)
+    log_dir = os.path.join('training_logs', name_experiment)
     log_path = os.path.join(log_dir, 'logging.txt')
     # Check if there is already a folder with the name of the experiment
     create_folder = True
@@ -142,7 +141,8 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
         sys.exit()
 
     # create tensorboard
-    writer = SummaryWriter(log_dir=log_dir)
+    if log_dir:
+        writer = SummaryWriter(log_dir=log_dir)
     # log parameters
     print_info(f'Folder {log_dir} created to save tensorboard logs.\n', log_path)
     print_info(f'Started at: {datetime.datetime.now()}', log_path)
@@ -216,14 +216,14 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
             {
                 'cycle_name': 'training MM',
                 'loss_func': nn.MSELoss(),
-                'batch_size': 1,  # 1 passa-se com blocos acumulados
+                'batch_size': 1,
                 'load_mode': 'block',
                 'count_trained_batches': 0
             },
             {
                 'cycle_name': 'training CM',
                 'loss_func': nn.MSELoss(),
-                'batch_size': 1,  # passa-se com blocos acumulados
+                'batch_size': 1,
                 'load_mode': 'block',
                 'count_trained_batches': 0
             },
@@ -435,8 +435,9 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
             'outputs_model': outputs['model_output']
         }
         img_results_strap = tb_utils.get_strips_intermediate_images(**params_dict)
-        writer.add_image('final_strip', img_results_strap, global_step=counter)
-        writer.close()
+        if writer is not None:
+            writer.add_image('final_strip', img_results_strap, global_step=counter)
+            writer.close()
 
     def train(cycle, not_learning=False):
         # Set load_mode ('block' or 'keyframe') and batch size according to the training cycle
@@ -818,7 +819,7 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
             # register into the log (pickle file) the module loss
             log_data['training_loss'][epoch][train_cycle["cycle_name"]] = loss_epoch_train
             # save training loss into the tensorboard
-            if epoch % tensorboard_params['training']['loss']['period'] == 0:
+            if writer is not None and epoch % tensorboard_params['training']['loss']['period'] == 0:
                 writer.add_scalars("loss", {f'train {cycle_name}': loss_epoch_train}, epoch)
                 writer.close()
 
@@ -826,7 +827,8 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
         log_data['training_variables'][epoch] = model.get_trainable_values()
 
         # after all cycles, save the learned parameters
-        if epoch % tensorboard_params['training']['parameters_evolution']['period'] == 0:
+        if writer is not None and epoch % tensorboard_params['training']['parameters_evolution'][
+                'period'] == 0:
             tb_utils.save_trainable_values(writer,
                                            model,
                                            prefix_var='epoch_',
@@ -846,7 +848,8 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
 
             log_data['validation_metrics'][epoch] = metrics_val
             # save valitation into tensorboard
-            if epoch % tensorboard_params['validation']['loss']['period'] == 0:
+            if writer is not None and epoch % tensorboard_params['validation']['loss'][
+                    'period'] == 0:
                 writer.add_scalars(
                     "loss", {'validation': metrics_val["summary_validation"]["loss_validation"]},
                     epoch)
@@ -871,31 +874,4 @@ def main(fold, epochs, batch_size, net, name_experiment, seed, init_params_file,
 
 
 if __name__ == "__main__":
-    # device = torch.device(f'cpu')
-    # for fold in range(1, 10):
-    #     try:
-    #         if fold in [2, 3, 7, 8, 9]:
-    #             model_path = f'/home/rafael.padilla/thesis/differentiable-anomaly-detection-pipeline/training_logs/temporal_alignment_fold_{fold}_reforco/model_epoch_0.pth'
-    #         else:
-    #             model_path = f'/home/rafael.padilla/thesis/differentiable-anomaly-detection-pipeline/training_logs/temporal_alignment_fold_{fold}/model_epoch_0.pth'
-    #         model = torch.load(model_path, map_location=device)
-    #         print(f'deu certo fold {fold}')
-    #     except:
-    #         print(f'deu merda fold {fold}')
     main()
-
-# main(
-#     fold=2,
-#     device=0,
-#     net='DM_MM_TCM_CM',
-#     alignment='temporal',
-#     name_experiment='temporal_alignment_fold_2_reforco',
-#     continue_from='/training_logs/temporal_alignment_fold_2_reforco/model_epoch_82.pth',
-#     batch_size=14,
-#     epochs=100,
-#     perform_validation=True,
-#     run_once_without_training=False,
-#     seed=123,
-#     init_params_file='src/init_params_train.json',
-#     tb_params_file='src/tb_params.json',
-# )
