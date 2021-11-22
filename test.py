@@ -138,6 +138,7 @@ def evaluate_model(model_path,
 
     # Load module
     model = torch.load(model_path, map_location=device)
+
     # Freezes everything
     model.dissimilarity_module.freeze()
     model.opening.freeze()
@@ -510,7 +511,6 @@ def main(fold, dir_pth, fp_pkl, net, fps, quality, dir_out, alignment, device, s
             return
     os.makedirs(dir_out, exist_ok=True)
 
-    fp_pkl = fp_pkl.name
     log_path = os.path.join(dir_out, f'testing_results_fold_{fold}.txt')
     init_time = datetime.datetime.now()
     print_info(f'Test initialized at: {init_time.strftime("%Y-%B-%d %H:%M:%S")}\n', log_path)
@@ -518,7 +518,7 @@ def main(fold, dir_pth, fp_pkl, net, fps, quality, dir_out, alignment, device, s
     print_info(f'fold: {fold}', log_path)
     print_info(f'alignment: {alignment}', log_path)
     print_info(f'dir_pth: {dir_pth}', log_path)
-    print_info(f'fp_pkl: {fp_pkl}', log_path)
+    print_info(f'fp_pkl: {fp_pkl.name}', log_path)
     print_info(f'net: {net}', log_path)
     print_info(f'fps: {fps}', log_path)
     print_info(f'quality: {quality}', log_path)
