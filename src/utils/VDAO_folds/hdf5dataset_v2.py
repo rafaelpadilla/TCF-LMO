@@ -137,41 +137,11 @@ class HDF5Dataset(data.Dataset):
         return selected_bb
 
     def __getitem__(self, index):
-        # start = time.time()
-        # # get reference frames
-        # ref = self.get_data("img_ref_sample_", index)
-        # tar = self.get_data("img_tar_sample_", index)
-        # # load as torch arrays
-        # ref = torch.tensor(ref)
-        # tar = torch.tensor(tar)
-        # # get label
-        # label = self.get_data("label_sample_", index)
-        # label = torch.tensor(label).type(torch.float)
-        # # get bb
-        # bbs = self.get_data("bb_sample_", index)
-        # # replace cases where bb => tensor([]), which means no bounding box (no anomaly frames) by bb [0,0,0,0]
-        # bbs = [[[[0, 0, 0, 0]]] if len(el.shape) == 1 else el for i, el in enumerate(bbs)]
-        # bbs = torch.tensor(bbs)
-        # if self.load_mode == 'block':
-        #     bb = torch.tensor([self.get_biggest_bb(bb).tolist() for bb in bbs])
-        # elif self.load_mode == 'keyframe':
-        #     # return self.hdf5_file[_filename][f'{type_data}{sample_id}']
-        #     bb = self.get_biggest_bb(bbs).unsqueeze(0)
-        # end = time.time() - start
-        # return ref, tar, label, bb
-
-        # start = time.time()
         ret = self.get_multiple_data(
             ['img_ref_sample_', 'img_tar_sample_', 'label_sample_', 'bb_sample_'], index)
 
         ref2 = torch.tensor(np.array(ret['img_ref_sample_']))  #0.74s
         tar2 = torch.tensor(np.array(ret['img_tar_sample_']))
-
-        # ref2 = torch.as_tensor(np.array(ret['img_ref_sample_'])) 0.76s
-        # tar2 = torch.as_tensor(np.array(ret['img_tar_sample_']))
-
-        # ref2 = torch.tensor(ret['img_ref_sample_']) 2.24s
-        # tar2 = torch.tensor(ret['img_tar_sample_'])
         label2 = torch.tensor(np.array(ret['label_sample_'])).type(torch.float)
         # replace cases where bb => tensor([]), which means no bounding box (no anomaly frames) by bb [0,0,0,0]
         bbs2 = [[[[0, 0, 0, 0]]] if len(el.shape) == 1 else el
@@ -180,18 +150,7 @@ class HDF5Dataset(data.Dataset):
         if self.load_mode == 'block':
             bb2 = torch.tensor([self.get_biggest_bb(bb).tolist() for bb in bbs2])
         elif self.load_mode == 'keyframe':
-            # return self.hdf5_file[_filename][f'{type_data}{sample_id}']
             bb2 = self.get_biggest_bb(bbs2).unsqueeze(0)
-        # end2 = time.time() - start
-        # print(f'{end2} s')
-
-        # assert (ref == ref2).all()
-        # assert (tar == tar2).all()
-        # assert (label == label2).all()
-        # assert (bb == bb2).all()
-        # print(end2 - end, end2 < end)
-
-        # return ref2, tar2, label2, bb2
 
         return ref2, tar2, label2, bb2, self.blocks[index]
 
