@@ -1,4 +1,4 @@
-# Lightweight Change Detection in Moving-CameraVideos Using Twin-CNN Features and LearnableMorphological Operations.
+# Lightweight Change Detection in Moving-Camera Videos Using Twin-CNN Features and Learnable Morphological Operations.
 
 * [Overview](#overview)  
 * [Requirements](#requirements)  
