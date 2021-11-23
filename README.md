@@ -1,5 +1,4 @@
-# Anomaly Detection in Moving-Camera Videos Using Deep-Learning Networks and Fully Differentiable Morphological Operations (DL-DMO)
-Anomaly Detection Network is a network made with dedicated modules to process frames and identify the presence of anomalies.
+# Lightweight Change Detection in Moving-CameraVideos Using Twin-CNN Features and LearnableMorphological Operations.
 
 * Overview
 * Requirements
