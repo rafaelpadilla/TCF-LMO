@@ -1,16 +1,16 @@
 # Lightweight Change Detection in Moving-CameraVideos Using Twin-CNN Features and LearnableMorphological Operations.
 
-* Overview
-* Requirements
-* Training
-* Testing 
-* Results
-   * Metrics
-   * Frame-level results 
-   * Object-level results 
-* Acknowledgement
+* [Overview](#overview)  
+* [Requirements](#requirements)  
+* [Train the model from scratch](#training)  
+* [Testing](#testing)  
+* [Results](#results)  
+   * [Metrics](#metrics)  
+   * [Frame-level results](#fl-results)  
+   * [Object-level results](#ol-results)  
+* [Acknowledgement](#acknowledgment)   
   
-
+<a name="overview"></a>  
 ## Overview
 The anomaly detection network consists of five modules as illustrated below:
 
@@ -27,6 +27,7 @@ Where:
 (e) eroded version of (d) computed by differentiable morphology module (MM)  
 (f) eroded version of (e) computed by differentiable morphology module (MM)  
 
+<a name="requirements"></a>  
 ## Requirements
 
 ### Installing packages and libraries:
@@ -40,6 +41,7 @@ You can train the model from scratch, or use the pretrained model to evaluate th
 
 Optionally, you could download the full **not aligned** videos from the VDAO official web site: [training set](http://www02.smt.ufrj.br/~tvdigital/database/objects/page_01.html) and [testing set](http://www02.smt.ufrj.br/~tvdigital/database/research/page_01.html).Thus, you could apply alternative alignment/registration techniques and train the DN-LMO model.
 
+<a name="training"></a>  
 ### A. (Optional) Train the model from scratch:
 
 Use the commands below to download the datasets (training + validation) and train the network:
@@ -49,14 +51,17 @@ Use the commands below to download the datasets (training + validation) and trai
 **3. Train the network:** `python train.py --fold 1 --net DM_MM_TCM_CM`  
 *Notice:* Use the argument `--fold` to select which fold to train (options: `--fold 1`, `--fold 2`, `--fold 3`, `--fold 4`, `--fold 5`, `--fold 6`, `--fold 7`, `--fold 8`, `--fold 9`).
 
+<a name="testing"></a>  
 ### B. Testing
 
 **1. Download the aligned dataset for testing:** `sh download_testing_dataset.sh`  
 **2. Download the pretrained model:** `sh download_pretrained.sh`  
 **3. Evaluate the network:** `sh evaluate.sh`
 
+<a name="results"></a>  
 ## Results
 
+<a name="metrics"></a>  
 ### Metrics
 
 <details>
@@ -74,6 +79,7 @@ The best value is obtained when TPR=1 and FPR=0 resulting in a DIS=0, which repr
 
  </details>
 
+<a name="fl-results"></a>
 ### Frame-level results 
 
 <table>
@@ -150,6 +156,7 @@ The best value is obtained when TPR=1 and FPR=0 resulting in a DIS=0, which repr
 </tbody>
 </table>
 
+<a name="ol-results"></a>  
 ### Object-level results
   
 <table>
@@ -217,6 +224,7 @@ The best value is obtained when TPR=1 and FPR=0 resulting in a DIS=0, which repr
 </tbody>
 </table>
 
+<a name="acknowledgment"></a> 
 ## Acknowledgement
 
 Most of the experimental results reported in this work wereobtained with a Titan X Pascal board gently donated by the NVIDIA Corporation.
