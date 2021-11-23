@@ -227,4 +227,4 @@ The best value is obtained when TPR=1 and FPR=0 resulting in a DIS=0, which repr
 <a name="acknowledgment"></a> 
 ## Acknowledgement
 
-Most of the experimental results reported in this work wereobtained with a Titan X Pascal board gently donated by the NVIDIA Corporation.
+Most of the experimental results reported in this work were obtained with a Titan X Pascal board gently donated by the NVIDIA Corporation.
