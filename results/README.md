@@ -13,7 +13,8 @@ As the videos are short (201 frames only), their frame rate was reduced for a be
 ## Frames
 
 Every frame of the testing set output by every module of our network can be accessed [here](
-https://drive.google.com/drive/folders/1Tcn5ADlRkUnXLcPY4gswPyqyjJ_sZYrt?usp=sharing)
+https://drive.google.com/drive/folders/1dEQ4-aRoi6kH6RQ8IWngSeGMtfgn5UAM?usp=sharing)
+
 
 These frames can be used as benchmarking with other approaches.
 
@@ -54,7 +55,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.15</td>
     <td>0.82</td>
     <td>0.00</td>
-    <td>0.18</td>
+    <td>0.28</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1avcS6dyzGOkqIl2MNLNucCPIJVmgy6ar/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 03</a></td>
@@ -108,7 +109,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.56</td>
     <td>0.44</td>
     <td>0.00</td>
-    <td>0.56</td>
+    <td>0.55</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1X9wACXGdRLTxoucQ7ROcZ8o5WfHb0exM/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 09</a></td>
@@ -117,7 +118,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.13</td>
     <td>0.98</td>
     <td>0.00</td>
-    <td>0.02</td>
+    <td>0.04</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/19A8nhZm-fUajwfIcae7fiAZ6UzYOAH-K/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 10</a></td>
@@ -126,7 +127,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.11</td>
     <td>0.89</td>
     <td>0.00</td>
-    <td>0.11</td>
+    <td>0.08</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/19HGTEtbbCpusloWKPm5g534TCHpJJnN9/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 11</a></td>
@@ -135,7 +136,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.1</td>
     <td>0.9</td>
     <td>0.00</td>
-    <td>0.1</td>
+    <td>0.09</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1QE3c3a8krSzFU6FR92clsCmqcHz2qq5n/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 12</a></td>
@@ -153,7 +154,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.01</td>
     <td>0.99</td>
     <td>0.00</td>
-    <td>0.01</td>
+    <td>0.10</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1RZktuoPAEsZN8z6H4BsGUcyjg5quc3BX/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 14</a></td>
@@ -162,7 +163,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.15</td>
     <td>0.84</td>
     <td>0.00</td>
-    <td>0.16</td>
+    <td>0.20</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1PuQq7K1ccbk6JNayaTqsAdZy4fccfmkK/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 15</a></td>
@@ -171,7 +172,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.27</td>
     <td>0.9</td>
     <td>0.00</td>
-    <td>0.1</td>
+    <td>0.09</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/15dRiJ-eH4Z2NDIDlZvyF7eTZVmS9Zzan/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 16</a></td>
@@ -189,7 +190,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.07</td>
     <td>0.93</td>
     <td>0.00</td>
-    <td>0.07</td>
+    <td>0.06</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1eSpG-HBj-XLMryxKJAqkgKhvl_BJLsih/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 18</a></td>
@@ -207,7 +208,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.13</td>
     <td>0.85</td>
     <td>0.00</td>
-    <td>0.15</td>
+    <td>0.14</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1yY1zWWoR90WytG9_bKRAvYOyBV0Ka9bh/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 20</a></td>
@@ -216,7 +217,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.07</td>
     <td>0.92</td>
     <td>0.00</td>
-    <td>0.08</td>
+    <td>1.00</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1usnlIV84qwLUFYXhgRHHw7OCLOs4whGz/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 21</a></td>
@@ -225,7 +226,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.08</td>
     <td>0.91</td>
     <td>0.00</td>
-    <td>0.09</td>
+    <td>0.45</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1xw6--vZLG_fsLdAwquCTdVMWC1JBwh4E/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 22</a></td>
@@ -234,7 +235,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.1</td>
     <td>0.9</td>
     <td>0.00</td>
-    <td>0.1</td>
+    <td>0.07</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1cGoay3NghwE6KdCT25bbMIWeqlmvig1e/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 23</a></td>
@@ -252,7 +253,7 @@ These frames can be used as benchmarking with other approaches.
     <td>1.00</td>
     <td>0.00</td>
     <td>0.00</td>
-    <td>0.00</td>
+    <td>1.00</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1mJy2iBWRce7cXNsyAVONxmapcZhfa5Py/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 25</a></td>
@@ -261,7 +262,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.79</td>
     <td>0.16</td>
     <td>0.00</td>
-    <td>0.84</td>
+    <td>0.45</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1Q98KPo8_lwNP7upG4iRuE92bfNu5YScE/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 26</a></td>
@@ -270,7 +271,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.41</td>
     <td>1.00</td>
     <td>0.16</td>
-    <td>0.16</td>
+    <td>0.09</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1BRpoISyV3TUnH8MyMCBh80fDWVhv33Bz/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 27</a></td>
@@ -297,7 +298,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.31</td>
     <td>0.7</td>
     <td>0.00</td>
-    <td>0.3</td>
+    <td>0.19</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/16gPfZf97a9tE6kmHGC8gJyRR7Q9EhZpL/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 30</a></td>
@@ -306,7 +307,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.04</td>
     <td>0.93</td>
     <td>0.00</td>
-    <td>0.07</td>
+    <td>0.09</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1r7j7ucSnDcYmoB5l8d5tVHW29Nzc_TKs/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 31</a></td>
@@ -342,7 +343,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.21</td>
     <td>0.76</td>
     <td>0.00</td>
-    <td>0.24</td>
+    <td>0.13</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1b8x9JZByYYCPgplS0sbz_RPJ4QEl66xf/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 35</a></td>
@@ -351,7 +352,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.07</td>
     <td>0.93</td>
     <td>0.00</td>
-    <td>0.07</td>
+    <td>0.10</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1liEcey94bjutN1uqyvP81CUuA7L5knGT/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 36</a></td>
@@ -369,7 +370,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.16</td>
     <td>0.84</td>
     <td>0.00</td>
-    <td>0.16</td>
+    <td>0.02</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1QYQVCVWf31Xia_854GPFqPJyOaGgxiGD/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 38</a></td>
@@ -378,7 +379,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.05</td>
     <td>0.95</td>
     <td>0.00</td>
-    <td>0.05</td>
+    <td>0.02</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/17x7YMx7ry_imqL-aJaiY9xA8tHPgURP1/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 39</a></td>
@@ -396,7 +397,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.06</td>
     <td>0.94</td>
     <td>0.00</td>
-    <td>0.06</td>
+    <td>0.09</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1tI5VjzUjQuZ1Gw8flgySHGJEDiE1ltUX/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 41</a></td>
@@ -405,7 +406,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.81</td>
     <td>1.00</td>
     <td>0.28</td>
-    <td>0.28</td>
+    <td>0.38</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/15iHULdErY5qKKLgG49ygsLhDYYIWCvw8/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 42</a></td>
@@ -414,7 +415,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.08</td>
     <td>0.92</td>
     <td>0.00</td>
-    <td>0.08</td>
+    <td>0.07</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1WMM54luOryffOhKK66khW9nIkWtwt46n/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 43</a></td>
@@ -432,7 +433,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.15</td>
     <td>0.85</td>
     <td>0.00</td>
-    <td>0.15</td>
+    <td>0.19</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1qQRrR_hKiOCEAu_nL6eqUtCdYdFX320S/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 45</a></td>
@@ -450,7 +451,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.1</td>
     <td>0.9</td>
     <td>0.00</td>
-    <td>0.1</td>
+    <td>0.10</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1qezseqm1tUpWMBuX-aRR6mdDArWhj9_m/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 47</a></td>
@@ -459,7 +460,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.17</td>
     <td>0.82</td>
     <td>0.00</td>
-    <td>0.18</td>
+    <td>0.13</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1KVYOAWlrs6BlMqYBlDxA2BmKfb2v0n1y/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 48</a></td>
@@ -468,7 +469,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.05</td>
     <td>0.94</td>
     <td>0.00</td>
-    <td>0.06</td>
+    <td>0.02</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/142k5utYa4dKdRUtzPr7BytDHtd4I2m9s/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 49</a></td>
@@ -477,7 +478,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.01</td>
     <td>0.97</td>
     <td>0.00</td>
-    <td>0.03</td>
+    <td>0.52</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1QeQZTKiYJncbV1EuuKeaQbb8n1GjfXiP/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 50</a></td>
@@ -486,7 +487,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.04</td>
     <td>0.96</td>
     <td>0.00</td>
-    <td>0.04</td>
+    <td>0.07</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1qwc3bk92TJ9G9piTyhgSFihL4MGdZdOU/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 51</a></td>
@@ -513,7 +514,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.57</td>
     <td>1.00</td>
     <td>0.22</td>
-    <td>0.22</td>
+    <td>0.20</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/15_XynQ30SEjAzNQkG42qp35COQ2HJgs7/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 54</a></td>
@@ -522,7 +523,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.07</td>
     <td>0.93</td>
     <td>0.00</td>
-    <td>0.07</td>
+    <td>0.02</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1Qin-RAoLPr07_RiliVpe5GvfeH9HFVZs/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 55</a></td>
@@ -531,7 +532,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.16</td>
     <td>0.84</td>
     <td>0.00</td>
-    <td>0.16</td>
+    <td>0.30</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1C8HRBXp7YFL0mx9Qf5287v7vopb6rplw/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 56</a></td>
@@ -540,7 +541,7 @@ These frames can be used as benchmarking with other approaches.
     <td>1.01</td>
     <td>1.00</td>
     <td>0.91</td>
-    <td>0.91</td>
+    <td>0.18</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1RUjf4X8J9DgSHcBJUHuDpXE5hHzW63ks/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 57</a></td>
@@ -549,7 +550,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.37</td>
     <td>0.98</td>
     <td>0.24</td>
-    <td>0.24</td>
+    <td>0.03</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1eUStHbm7uTLETFFv_KLmG3ToOj64qC-m/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 58</a></td>
@@ -558,7 +559,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.09</td>
     <td>0.9</td>
     <td>0.00</td>
-    <td>0.1</td>
+    <td>0.13</td>
   </tr>
   <tr>
     <td><a href="https://drive.google.com/file/d/1V0PlNFiRl-YcONhVcAGU1J7k5jRaoR0h/view?usp=sharing/" target="_blank" rel="noopener noreferrer">video 59</a></td>
@@ -567,7 +568,7 @@ These frames can be used as benchmarking with other approaches.
     <td>0.09</td>
     <td>0.91</td>
     <td>0.00</td>
-    <td>0.09</td>
+    <td>0.01</td>
   </tr>
   <tr>
     <td><b>Average</b></td>
@@ -576,7 +577,7 @@ These frames can be used as benchmarking with other approaches.
     <td><b>0.35</b></td>
     <td><b>0.85</b></td>
     <td><b>0.18</b></td>
-    <td><b>0.31</b></td>
+    <td><b>0.33</b></td>
   </tr>
 </tbody>
 </table>
