@@ -61,6 +61,8 @@ Use the commands below to download the datasets (training + validation) and trai
 <a name="results"></a>  
 ## Results
 
+For table of results, videos and frames in the testing set, access the folder [/results](https://github.com/rafaelpadilla/TCF-LMO/tree/main/results).  
+
 <a name="metrics"></a>  
 ### Metrics
 
