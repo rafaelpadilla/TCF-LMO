@@ -230,13 +230,18 @@ def create_image_with_results(images,
 
 def register_hooks(model):
     # Register hooks
-    return {
-        'hook_dissimilarity': Hook(module=model.dissimilarity_module),
-        'hook_opening': Hook(module=model.opening),
-        'hook_closing': Hook(module=model.closing),
-        'hook_sum_pixels_on': Hook(module=model.sum_pixels_on),
-        'hook_new_scale_pixels_on': Hook(module=model.change_scale_for_classification),
-    }
+    ret = {}
+    if hasattr(model, 'dissimilarity_module'):
+        ret['hook_dissimilarity'] = Hook(module=model.dissimilarity_module)
+    if hasattr(model, 'opening'):
+        ret['hook_opening'] = Hook(module=model.opening)
+    if hasattr(model, 'closing'):
+        ret['hook_closing'] = Hook(module=model.closing)
+    if hasattr(model, 'sum_pixels_on'):
+        ret['hook_sum_pixels_on'] = Hook(module=model.sum_pixels_on)
+    if hasattr(model, 'change_scale_for_classification'):
+        ret['hook_new_scale_pixels_on'] = Hook(module=model.change_scale_for_classification)
+    return ret
 
 
 def reposition_bb(bounding_box, img_h_w, border_percentage_removal):

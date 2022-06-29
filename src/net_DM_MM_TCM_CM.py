@@ -11,12 +11,15 @@ class Pipeline(ABC_Pipeline):
             out = out.unsqueeze(0)
         # 81, 144
         # MM (opening)
-        out = self.opening(out)
+        if hasattr(self, 'opening'):
+            out = self.opening(out)
         # 1, 1, 81, 144
         # MM (closing)
-        out = self.closing(out)
+        if hasattr(self, 'closing'):
+            out = self.closing(out)
         # TCM
-        out = self.temporal_consistency.inference_validation_test(out)
+        if hasattr(self, 'temporal_consistency'):
+            out = self.temporal_consistency.inference_validation_test(out)
         # 1, 1, 81, 144
         # Count pixels "on" in each image
         out = self.sum_pixels_on(out)
@@ -43,10 +46,12 @@ class Pipeline(ABC_Pipeline):
                 return out.unsqueeze(1)
         # batch, 81, 144
         # MM (opening)
-        out = self.opening(out)
+        if hasattr(self, 'opening'):
+            out = self.opening(out)
         # batch, 1 81, 144
         # MM (closing)
-        out = self.closing(out)
+        if hasattr(self, 'closing'):
+            out = self.closing(out)
         # batch, 1, 81, 144
         if tensors['cycle_name'] == 'training MM':
             return out
@@ -58,16 +63,17 @@ class Pipeline(ABC_Pipeline):
         if tensors['cycle_name'] in ['training CM']:
             # 15, 81, 144
             # TCM
-            out = self.temporal_consistency.inference_train(out.squeeze())
-            # 81, 144
-            # Add temporal consistency result in the list
-            self.temporal_consistency.gather_one_by_one_inference(out)
-            # Check if the buffer is filled with a full batch
-            if self.temporal_consistency.is_buffer_complete():
-                out = self.temporal_consistency.frames_inference.clone().to(self.device)
+            if hasattr(self, 'temporal_consistency'):
+                out = self.temporal_consistency.inference_train(out.squeeze())
+                # 81, 144
+                # Add temporal consistency result in the list
+                self.temporal_consistency.gather_one_by_one_inference(out)
+                # Check if the buffer is filled with a full batch
+                if self.temporal_consistency.is_buffer_complete():
+                    out = self.temporal_consistency.frames_inference.clone().to(self.device)
                 # batch, 81, 144
-            else:
-                return 'buffer not full yet'
+                else:
+                    return 'buffer not full yet'
         # Count pixels "on" in each image
         out = self.sum_pixels_on(out)
         # batch, 1
