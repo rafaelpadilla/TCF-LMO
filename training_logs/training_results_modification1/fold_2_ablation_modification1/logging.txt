@@ -1,0 +1,2334 @@
+Folder training_logs/fold_2_ablation_modification1 created to save tensorboard logs.
+
+Started at: 2022-03-30 02:41:11.872922
+Hostname: munique.smt.ufrj.br
+Experiment name: fold_2_ablation_modification1
+
+Fold: 2
+Parameters:
+--fold 2
+--batch_size 14
+--epochs 100
+--ablation modification1
+--name_experiment fold_2_ablation_modification1
+--seed 123
+--init_params_file src/init_params_train.json
+--device 1
+--tb_params_file src/tb_params.json
+--perform_validation True
+--run_once_without_training True
+--continue_from None
+--alignment temporal
+
+
+Datasets info:
+Training dataset (fold 2) loaded with 12950 samples:
+Positive samples: 6475
+Negative samples: 6475
+['dark_blue_box', 'towel', 'camera_box', 'pink_bottle', 'black_coat']
+
+Validation dataset (fold 2) loaded with 3618 samples:
+Positive samples: 2841
+Negative samples: 777
+['shoe', 'white_jar', 'brown_box']
+
+****************************************************************************************************
+
+Epoch 1:100 	 NOT LEARNING
+training cycle DM	Loss: 0.128104060493611	Running time: 1620.6820056438446 s
+training cycle MM	Loss: 0.13969805305874025	Running time: 1565.1663024425507 s
+training cycle TCM	Loss: 0.07797371881767774	Running time: 3410.878444671631 s
+training cycle CM	Loss: 0.38069660973709984	Running time: 3362.5749406814575 s
+
+Model saved (model_epoch_0.pth)
+
+Evaluating validation set
+validation loss: 0.7139303482587065
+validation accuracy: 28.61%
+validation DIS: 0.8886879937027968
+
+Main parameters of the network:
+* opening radius: 1.0
+* closing radius: 1.0
+* temporal consistency neighbors: 15
+* threshold classification: 0.20000000298023224
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 2:100
+training cycle DM	Loss: 0.11116882505851823	Running time: 1541.5072646141052 s
+training cycle MM	Loss: 0.09199493691325188	Running time: 1546.8998067378998 s
+training cycle TCM	Loss: 0.0850094458857429	Running time: 3392.5461847782135 s
+training cycle CM	Loss: 0.4653619962527945	Running time: 3357.5265741348267 s
+
+Model saved (model_epoch_1.pth)
+
+Evaluating validation set
+validation loss: 0.7139303482587065
+validation accuracy: 28.61%
+validation DIS: 0.8886879937027968
+
+Main parameters of the network:
+* opening radius: 0.9855676889419556
+* closing radius: 1.5292835235595703
+* temporal consistency neighbors: 15
+* threshold classification: 0.19104143977165222
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 3:100
+training cycle DM	Loss: 0.1084709885877532	Running time: 1544.7910475730896 s
+training cycle MM	Loss: 0.08884400491980282	Running time: 1535.8917264938354 s
+training cycle TCM	Loss: 0.07727697874257579	Running time: 3393.9624197483063 s
+training cycle CM	Loss: 0.4064208017652099	Running time: 3380.1184360980988 s
+
+Model saved (model_epoch_2.pth)
+
+Evaluating validation set
+validation loss: 0.7139303482587065
+validation accuracy: 28.61%
+validation DIS: 0.8886879937027968
+
+Main parameters of the network:
+* opening radius: 0.9821346998214722
+* closing radius: 2.698269844055176
+* temporal consistency neighbors: 15
+* threshold classification: 0.1822841763496399
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 4:100
+training cycle DM	Loss: 0.10846250465592823	Running time: 1553.4842247962952 s
+training cycle MM	Loss: 0.08204025173912177	Running time: 1512.1822979450226 s
+training cycle TCM	Loss: 0.07699481698326159	Running time: 3397.469403028488 s
+training cycle CM	Loss: 0.40125530462007264	Running time: 3403.0856997966766 s
+
+Model saved (model_epoch_3.pth)
+
+Evaluating validation set
+validation loss: 0.7139303482587065
+validation accuracy: 28.61%
+validation DIS: 0.8886879937027968
+
+Main parameters of the network:
+* opening radius: 0.9823477268218994
+* closing radius: 2.6451339721679688
+* temporal consistency neighbors: 15
+* threshold classification: 0.17514222860336304
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 5:100
+training cycle DM	Loss: 0.10846346031572368	Running time: 1567.9347763061523 s
+training cycle MM	Loss: 0.08017884209550716	Running time: 1499.6582958698273 s
+training cycle TCM	Loss: 0.0728541240007275	Running time: 3402.447206735611 s
+training cycle CM	Loss: 0.3687078697939177	Running time: 3435.156962633133 s
+
+Model saved (model_epoch_4.pth)
+
+Evaluating validation set
+validation loss: 0.6506881275079052
+validation accuracy: 34.91%
+validation DIS: 0.8071824177520595
+
+Main parameters of the network:
+* opening radius: 0.99041348695755
+* closing radius: 3.852708339691162
+* temporal consistency neighbors: 15
+* threshold classification: 0.17270590364933014
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 6:100
+training cycle DM	Loss: 0.10846628331252046	Running time: 1545.6604809761047 s
+training cycle MM	Loss: 0.07745857843172711	Running time: 1496.460325717926 s
+training cycle TCM	Loss: 0.07257420495369123	Running time: 3406.661444425583 s
+training cycle CM	Loss: 0.36680012019904884	Running time: 3457.9825315475464 s
+
+Model saved (model_epoch_5.pth)
+
+Evaluating validation set
+validation loss: 0.6414662297981812
+validation accuracy: 35.79%
+validation DIS: 0.7927121255313933
+
+Main parameters of the network:
+* opening radius: 0.991046667098999
+* closing radius: 3.8550548553466797
+* temporal consistency neighbors: 15
+* threshold classification: 0.1650298684835434
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 7:100
+training cycle DM	Loss: 0.10846904584684887	Running time: 1527.233020067215 s
+training cycle MM	Loss: 0.07750679481673885	Running time: 1499.6257054805756 s
+training cycle TCM	Loss: 0.07268460879201234	Running time: 3413.316499710083 s
+training cycle CM	Loss: 0.3661724224686623	Running time: 3478.7958047389984 s
+
+Model saved (model_epoch_6.pth)
+
+Evaluating validation set
+validation loss: 0.6429698404379974
+validation accuracy: 35.68%
+validation DIS: 0.7945138241618351
+
+Main parameters of the network:
+* opening radius: 0.9910703897476196
+* closing radius: 3.857104778289795
+* temporal consistency neighbors: 15
+* threshold classification: 0.163211390376091
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 8:100
+training cycle DM	Loss: 0.10845303572915696	Running time: 1512.89457654953 s
+training cycle MM	Loss: 0.07739480812605974	Running time: 1503.1072175502777 s
+training cycle TCM	Loss: 0.07242402945748534	Running time: 3413.3287088871 s
+training cycle CM	Loss: 0.36140667162547707	Running time: 3511.1772017478943 s
+
+Model saved (model_epoch_7.pth)
+
+Evaluating validation set
+validation loss: 0.603917728020602
+validation accuracy: 39.61%
+validation DIS: 0.7441765773511175
+
+Main parameters of the network:
+* opening radius: 0.9908300042152405
+* closing radius: 3.8572897911071777
+* temporal consistency neighbors: 15
+* threshold classification: 0.15368805825710297
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 9:100
+training cycle DM	Loss: 0.10847652133151486	Running time: 1491.3028538227081 s
+training cycle MM	Loss: 0.07772772337335188	Running time: 1500.4799449443817 s
+training cycle TCM	Loss: 0.07289104784959316	Running time: 3420.564449071884 s
+training cycle CM	Loss: 0.35940276388380976	Running time: 3524.548309326172 s
+
+Model saved (model_epoch_8.pth)
+
+Evaluating validation set
+validation loss: 0.6033604649871176
+validation accuracy: 39.64%
+validation DIS: 0.7438307857954893
+
+Main parameters of the network:
+* opening radius: 0.9907045364379883
+* closing radius: 3.858280897140503
+* temporal consistency neighbors: 15
+* threshold classification: 0.1449672132730484
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 10:100
+training cycle DM	Loss: 0.10846490847903328	Running time: 1477.1278059482574 s
+training cycle MM	Loss: 0.07755802466659932	Running time: 1497.5650532245636 s
+training cycle TCM	Loss: 0.07274516060421582	Running time: 3423.038605451584 s
+training cycle CM	Loss: 0.3511378226489634	Running time: 3529.8683874607086 s
+
+Model saved (model_epoch_9.pth)
+
+Evaluating validation set
+validation loss: 0.5834948579617945
+validation accuracy: 41.60%
+validation DIS: 0.719294951717692
+
+Main parameters of the network:
+* opening radius: 0.9911031723022461
+* closing radius: 3.8591010570526123
+* temporal consistency neighbors: 15
+* threshold classification: 0.13411135971546173
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 11:100
+training cycle DM	Loss: 0.10846143256973576	Running time: 1478.4316523075104 s
+training cycle MM	Loss: 0.07755033506281875	Running time: 1496.7383008003235 s
+training cycle TCM	Loss: 0.07269942099329185	Running time: 3430.9771025180817 s
+training cycle CM	Loss: 0.3434801685729542	Running time: 3540.667133808136 s
+
+Model saved (model_epoch_10.pth)
+
+Evaluating validation set
+validation loss: 0.5499796402887318
+validation accuracy: 44.94%
+validation DIS: 0.6771213210145951
+
+Main parameters of the network:
+* opening radius: 0.990485668182373
+* closing radius: 3.845064401626587
+* temporal consistency neighbors: 15
+* threshold classification: 0.12921899557113647
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 12:100
+training cycle DM	Loss: 0.10846847625600325	Running time: 1483.2476716041565 s
+training cycle MM	Loss: 0.07754134835461406	Running time: 1503.8655033111572 s
+training cycle TCM	Loss: 0.07272358590937453	Running time: 3443.9212594032288 s
+training cycle CM	Loss: 0.3406483833607588	Running time: 3537.5915615558624 s
+
+Model saved (model_epoch_11.pth)
+
+Evaluating validation set
+validation loss: 0.5431900022995811
+validation accuracy: 45.66%
+validation DIS: 0.6681304996507332
+
+Main parameters of the network:
+* opening radius: 0.9910189509391785
+* closing radius: 3.8446950912475586
+* temporal consistency neighbors: 15
+* threshold classification: 0.1202600970864296
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 13:100
+training cycle DM	Loss: 0.10846373206054842	Running time: 1471.2205686569214 s
+training cycle MM	Loss: 0.07780325166478351	Running time: 1493.067190170288 s
+training cycle TCM	Loss: 0.07294674718233804	Running time: 3459.5781326293945 s
+training cycle CM	Loss: 0.3367635691327018	Running time: 3518.3433108329773 s
+
+Model saved (model_epoch_12.pth)
+
+Evaluating validation set
+validation loss: 0.5342104471093705
+validation accuracy: 46.55%
+validation DIS: 0.6570043589190745
+
+Main parameters of the network:
+* opening radius: 0.9902333617210388
+* closing radius: 3.8174655437469482
+* temporal consistency neighbors: 15
+* threshold classification: 0.11679636687040329
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 14:100
+training cycle DM	Loss: 0.10846784966217506	Running time: 1479.6879661083221 s
+training cycle MM	Loss: 0.07754271874959405	Running time: 1501.6539587974548 s
+training cycle TCM	Loss: 0.07289308219836148	Running time: 3481.748456954956 s
+training cycle CM	Loss: 0.3377108724873412	Running time: 3500.7597482204437 s
+
+Model saved (model_epoch_13.pth)
+
+Evaluating validation set
+validation loss: 0.5375302914041212
+validation accuracy: 46.21%
+validation DIS: 0.6611628358029347
+
+Main parameters of the network:
+* opening radius: 0.9917693734169006
+* closing radius: 3.8501179218292236
+* temporal consistency neighbors: 15
+* threshold classification: 0.10995633900165558
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 15:100
+training cycle DM	Loss: 0.10843729527415456	Running time: 1479.2977826595306 s
+training cycle MM	Loss: 0.07737735785946653	Running time: 1503.0164065361023 s
+training cycle TCM	Loss: 0.07241898097869182	Running time: 3514.666573047638 s
+training cycle CM	Loss: 0.3214282104453525	Running time: 3482.7315304279327 s
+
+Model saved (model_epoch_14.pth)
+
+Evaluating validation set
+validation loss: 0.5011670307550052
+validation accuracy: 49.86%
+validation DIS: 0.6179456624387004
+
+Main parameters of the network:
+* opening radius: 0.9904197454452515
+* closing radius: 3.7881858348846436
+* temporal consistency neighbors: 15
+* threshold classification: 0.09993721544742584
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 16:100
+training cycle DM	Loss: 0.10846133305011568	Running time: 1479.6659216880798 s
+training cycle MM	Loss: 0.07767502724218207	Running time: 1502.9415271282196 s
+training cycle TCM	Loss: 0.07283665606633376	Running time: 3538.8319783210754 s
+training cycle CM	Loss: 0.32194686243663023	Running time: 3460.764081954956 s
+
+Model saved (model_epoch_15.pth)
+
+Evaluating validation set
+validation loss: 0.4944118841992038
+validation accuracy: 50.50%
+validation DIS: 0.6085729134174227
+
+Main parameters of the network:
+* opening radius: 0.9907962679862976
+* closing radius: 3.8180465698242188
+* temporal consistency neighbors: 15
+* threshold classification: 0.0907629206776619
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 17:100
+training cycle DM	Loss: 0.10845318930777344	Running time: 1475.7236940860748 s
+training cycle MM	Loss: 0.07680034253947639	Running time: 1497.5083553791046 s
+training cycle TCM	Loss: 0.07180985181629262	Running time: 3565.4757640361786 s
+training cycle CM	Loss: 0.3164755870281039	Running time: 3441.611151456833 s
+
+Model saved (model_epoch_16.pth)
+
+Evaluating validation set
+validation loss: 0.5002631808127658
+validation accuracy: 49.89%
+validation DIS: 0.6175072533829358
+
+Main parameters of the network:
+* opening radius: 0.9961819052696228
+* closing radius: 4.903374671936035
+* temporal consistency neighbors: 15
+* threshold classification: 0.08896224200725555
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 18:100
+training cycle DM	Loss: 0.108470980279349	Running time: 1475.3140964508057 s
+training cycle MM	Loss: 0.07615007029493918	Running time: 1498.447499513626 s
+training cycle TCM	Loss: 0.07173433388197709	Running time: 3589.065779685974 s
+training cycle CM	Loss: 0.31101645585652943	Running time: 3419.1573123931885 s
+
+Model saved (model_epoch_17.pth)
+
+Evaluating validation set
+validation loss: 0.48854571864888335
+validation accuracy: 51.00%
+validation DIS: 0.6075553595127423
+
+Main parameters of the network:
+* opening radius: 0.9964576959609985
+* closing radius: 4.911257743835449
+* temporal consistency neighbors: 15
+* threshold classification: 0.07876420021057129
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 19:100
+training cycle DM	Loss: 0.10846732273697852	Running time: 1476.550223827362 s
+training cycle MM	Loss: 0.07617321495570846	Running time: 1498.8318362236023 s
+training cycle TCM	Loss: 0.07178453456935864	Running time: 3609.5759654045105 s
+training cycle CM	Loss: 0.30273288369178775	Running time: 3393.8464090824127 s
+
+Model saved (model_epoch_18.pth)
+
+Evaluating validation set
+validation loss: 0.43711389013112534
+validation accuracy: 56.25%
+validation DIS: 0.5515479338578881
+
+Main parameters of the network:
+* opening radius: 0.9964683055877686
+* closing radius: 4.906246185302734
+* temporal consistency neighbors: 15
+* threshold classification: 0.06754858046770096
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 20:100
+training cycle DM	Loss: 0.10844142898514464	Running time: 1475.8555297851562 s
+training cycle MM	Loss: 0.07641405229230185	Running time: 1497.4620349407196 s
+training cycle TCM	Loss: 0.07196201936642074	Running time: 3609.395210504532 s
+training cycle CM	Loss: 0.2807452228828022	Running time: 3383.1089828014374 s
+
+Model saved (model_epoch_19.pth)
+
+Evaluating validation set
+validation loss: 0.4316588089583784
+validation accuracy: 56.80%
+validation DIS: 0.5667917361170756
+
+Main parameters of the network:
+* opening radius: 0.9952841401100159
+* closing radius: 4.880862236022949
+* temporal consistency neighbors: 15
+* threshold classification: 0.054539285600185394
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 21:100
+training cycle DM	Loss: 0.10846188384133416	Running time: 1480.3448059558868 s
+training cycle MM	Loss: 0.07625819836617322	Running time: 1493.093358039856 s
+training cycle TCM	Loss: 0.07197495301074301	Running time: 3603.2092447280884 s
+training cycle CM	Loss: 0.26346729673566427	Running time: 3378.4816904067993 s
+
+Model saved (model_epoch_20.pth)
+
+Evaluating validation set
+validation loss: 0.3975454114803332
+validation accuracy: 60.14%
+validation DIS: 0.5366149132722384
+
+Main parameters of the network:
+* opening radius: 0.9966731667518616
+* closing radius: 4.888156890869141
+* temporal consistency neighbors: 15
+* threshold classification: 0.04032488539814949
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 22:100
+training cycle DM	Loss: 0.10847525735561912	Running time: 1480.4523556232452 s
+training cycle MM	Loss: 0.07614500015168577	Running time: 1515.6449921131134 s
+training cycle TCM	Loss: 0.0716050355651049	Running time: 3563.445410013199 s
+training cycle CM	Loss: 0.21356400787705654	Running time: 3368.6446709632874 s
+
+Model saved (model_epoch_21.pth)
+
+Evaluating validation set
+validation loss: 0.33310709087272106
+validation accuracy: 66.61%
+validation DIS: 0.48565529524330453
+
+Main parameters of the network:
+* opening radius: 0.9958600997924805
+* closing radius: 4.866392612457275
+* temporal consistency neighbors: 15
+* threshold classification: 0.024441896006464958
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 23:100
+training cycle DM	Loss: 0.10846246248966938	Running time: 1478.2227268218994 s
+training cycle MM	Loss: 0.07590279732704969	Running time: 1545.128598690033 s
+training cycle TCM	Loss: 0.07132144771626896	Running time: 3531.054378271103 s
+training cycle CM	Loss: 0.17140042471038244	Running time: 3359.8065078258514 s
+
+Model saved (model_epoch_22.pth)
+
+Evaluating validation set
+validation loss: 0.28865920483219
+validation accuracy: 71.03%
+validation DIS: 0.46906068476849283
+
+Main parameters of the network:
+* opening radius: 0.9959434866905212
+* closing radius: 4.858280658721924
+* temporal consistency neighbors: 15
+* threshold classification: 0.014272640459239483
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 24:100
+training cycle DM	Loss: 0.10846705350924182	Running time: 1472.6199851036072 s
+training cycle MM	Loss: 0.07598618649046969	Running time: 1572.158637046814 s
+training cycle TCM	Loss: 0.07146156313021858	Running time: 3497.28866481781 s
+training cycle CM	Loss: 0.15498378686408554	Running time: 3352.203105211258 s
+
+Model saved (model_epoch_23.pth)
+
+Evaluating validation set
+validation loss: 0.15552425521079624
+validation accuracy: 84.13%
+validation DIS: 0.4742641907832891
+
+Main parameters of the network:
+* opening radius: 0.9968191981315613
+* closing radius: 4.8595871925354
+* temporal consistency neighbors: 15
+* threshold classification: 0.004692870192229748
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 25:100
+training cycle DM	Loss: 0.10845802473055349	Running time: 1473.9535369873047 s
+training cycle MM	Loss: 0.07628717236774596	Running time: 1580.4239201545715 s
+training cycle TCM	Loss: 0.0719214933855247	Running time: 3471.231952190399 s
+training cycle CM	Loss: 0.14291386588981392	Running time: 3346.809918165207 s
+
+Model saved (model_epoch_24.pth)
+
+Evaluating validation set
+validation loss: 0.14894175474947724
+validation accuracy: 84.85%
+validation DIS: 0.4680222584964425
+
+Main parameters of the network:
+* opening radius: 0.9959262013435364
+* closing radius: 4.839042663574219
+* temporal consistency neighbors: 15
+* threshold classification: 0.004363636486232281
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 26:100
+training cycle DM	Loss: 0.10846123542737317	Running time: 1491.9615938663483 s
+training cycle MM	Loss: 0.07612844729796052	Running time: 1585.4668171405792 s
+training cycle TCM	Loss: 0.07159037523877781	Running time: 3444.8192710876465 s
+training cycle CM	Loss: 0.1444853642275888	Running time: 3335.2155261039734 s
+
+Model saved (model_epoch_25.pth)
+
+Evaluating validation set
+validation loss: 0.14901857871319718
+validation accuracy: 84.85%
+validation DIS: 0.47537873634172423
+
+Main parameters of the network:
+* opening radius: 0.9962053298950195
+* closing radius: 4.829121112823486
+* temporal consistency neighbors: 15
+* threshold classification: 0.004352078773081303
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 27:100
+training cycle DM	Loss: 0.10846612616165265	Running time: 1512.1522989273071 s
+training cycle MM	Loss: 0.07624474013274586	Running time: 1591.2336773872375 s
+training cycle TCM	Loss: 0.07181602456971004	Running time: 3417.757916212082 s
+training cycle CM	Loss: 0.14381296809885738	Running time: 3328.3716745376587 s
+
+Model saved (model_epoch_26.pth)
+
+Evaluating validation set
+validation loss: 0.15063804476612258
+validation accuracy: 84.77%
+validation DIS: 0.47429580413603883
+
+Main parameters of the network:
+* opening radius: 0.9954261779785156
+* closing radius: 4.814402103424072
+* temporal consistency neighbors: 15
+* threshold classification: 0.00502845598384738
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 28:100
+training cycle DM	Loss: 0.10845246537714391	Running time: 1541.9050147533417 s
+training cycle MM	Loss: 0.0761966177780886	Running time: 1581.3153986930847 s
+training cycle TCM	Loss: 0.07182087414088914	Running time: 3404.5719106197357 s
+training cycle CM	Loss: 0.1434015799435726	Running time: 3334.832525253296 s
+
+Model saved (model_epoch_27.pth)
+
+Evaluating validation set
+validation loss: 0.14687376204934993
+validation accuracy: 84.94%
+validation DIS: 0.4740088965939138
+
+Main parameters of the network:
+* opening radius: 0.9966617226600647
+* closing radius: 4.8184685707092285
+* temporal consistency neighbors: 15
+* threshold classification: 0.0037322533316910267
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 29:100
+training cycle DM	Loss: 0.1084715662091165	Running time: 1551.029241323471 s
+training cycle MM	Loss: 0.07612467719191635	Running time: 1556.830323457718 s
+training cycle TCM	Loss: 0.07159845054846321	Running time: 3403.7319824695587 s
+training cycle CM	Loss: 0.14398844439450847	Running time: 3362.23366189003 s
+
+Model saved (model_epoch_28.pth)
+
+Evaluating validation set
+validation loss: 0.15685338735379725
+validation accuracy: 84.00%
+validation DIS: 0.46847784350171573
+
+Main parameters of the network:
+* opening radius: 0.9966150522232056
+* closing radius: 4.81056022644043
+* temporal consistency neighbors: 15
+* threshold classification: 0.00508694164454937
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 30:100
+training cycle DM	Loss: 0.10846869700663798	Running time: 1559.291979789734 s
+training cycle MM	Loss: 0.07608024258569286	Running time: 1538.6684157848358 s
+training cycle TCM	Loss: 0.07151253237319809	Running time: 3400.9288845062256 s
+training cycle CM	Loss: 0.14349667378584732	Running time: 3387.923019170761 s
+
+Model saved (model_epoch_29.pth)
+
+Evaluating validation set
+validation loss: 0.13802920401889626
+validation accuracy: 85.99%
+validation DIS: 0.4811168589978262
+
+Main parameters of the network:
+* opening radius: 0.9962347745895386
+* closing radius: 4.7945380210876465
+* temporal consistency neighbors: 15
+* threshold classification: 0.003300165757536888
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 31:100
+training cycle DM	Loss: 0.10845661059424684	Running time: 1564.600025653839 s
+training cycle MM	Loss: 0.07620040869390643	Running time: 1520.296927690506 s
+training cycle TCM	Loss: 0.07178869295904852	Running time: 3407.150671482086 s
+training cycle CM	Loss: 0.14303619297809428	Running time: 3416.382096529007 s
+
+Model saved (model_epoch_30.pth)
+
+Evaluating validation set
+validation loss: 0.14864561152121392
+validation accuracy: 84.85%
+validation DIS: 0.46557485889632033
+
+Main parameters of the network:
+* opening radius: 0.996724009513855
+* closing radius: 4.791432857513428
+* temporal consistency neighbors: 15
+* threshold classification: 0.0039200312457978725
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 32:100
+training cycle DM	Loss: 0.10846173163604092	Running time: 1565.5225868225098 s
+training cycle MM	Loss: 0.07616334347356413	Running time: 1501.773319721222 s
+training cycle TCM	Loss: 0.07174322459328035	Running time: 3405.6128664016724 s
+training cycle CM	Loss: 0.14243681029598657	Running time: 3435.244980573654 s
+
+Model saved (model_epoch_31.pth)
+
+Evaluating validation set
+validation loss: 0.163215182119776
+validation accuracy: 83.14%
+validation DIS: 0.45252056789365036
+
+Main parameters of the network:
+* opening radius: 0.997019350528717
+* closing radius: 4.784704208374023
+* temporal consistency neighbors: 15
+* threshold classification: 0.0053537990897893906
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 33:100
+training cycle DM	Loss: 0.10846082950363288	Running time: 1542.8748602867126 s
+training cycle MM	Loss: 0.076095141319407	Running time: 1498.282791376114 s
+training cycle TCM	Loss: 0.07155966832996508	Running time: 3414.1365921497345 s
+training cycle CM	Loss: 0.14367923942279212	Running time: 3458.8979268074036 s
+
+Model saved (model_epoch_32.pth)
+
+Evaluating validation set
+validation loss: 0.15143708701438102
+validation accuracy: 84.58%
+validation DIS: 0.4758658574321304
+
+Main parameters of the network:
+* opening radius: 0.9960843324661255
+* closing radius: 4.765407085418701
+* temporal consistency neighbors: 15
+* threshold classification: 0.004674375057220459
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 34:100
+training cycle DM	Loss: 0.10845703287301837	Running time: 1527.0371997356415 s
+training cycle MM	Loss: 0.07604684129055288	Running time: 1501.416048526764 s
+training cycle TCM	Loss: 0.07160069033836597	Running time: 3411.2328412532806 s
+training cycle CM	Loss: 0.1450442091070703	Running time: 3478.9337453842163 s
+
+Model saved (model_epoch_33.pth)
+
+Evaluating validation set
+validation loss: 0.14924671006719994
+validation accuracy: 84.91%
+validation DIS: 0.47897270326069846
+
+Main parameters of the network:
+* opening radius: 0.9949398636817932
+* closing radius: 4.741116046905518
+* temporal consistency neighbors: 15
+* threshold classification: 0.005706301890313625
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 35:100
+training cycle DM	Loss: 0.10845445404584343	Running time: 1503.0393333435059 s
+training cycle MM	Loss: 0.076239030162829	Running time: 1497.4121792316437 s
+training cycle TCM	Loss: 0.07197721446128058	Running time: 3417.888040781021 s
+training cycle CM	Loss: 0.14298942862527736	Running time: 3506.1512775421143 s
+
+Model saved (model_epoch_34.pth)
+
+Evaluating validation set
+validation loss: 0.14700712783283984
+validation accuracy: 84.91%
+validation DIS: 0.4740560731934979
+
+Main parameters of the network:
+* opening radius: 0.9967144131660461
+* closing radius: 4.762321472167969
+* temporal consistency neighbors: 15
+* threshold classification: 0.0035841495264321566
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 36:100
+training cycle DM	Loss: 0.10845502229155721	Running time: 1486.0516226291656 s
+training cycle MM	Loss: 0.076353188059922	Running time: 1500.3906180858612 s
+training cycle TCM	Loss: 0.07194253090207202	Running time: 3415.471586227417 s
+training cycle CM	Loss: 0.1441472295939409	Running time: 3524.6558544635773 s
+
+Model saved (model_epoch_35.pth)
+
+Evaluating validation set
+validation loss: 0.19953427284828668
+validation accuracy: 79.55%
+validation DIS: 0.4507729109913226
+
+Main parameters of the network:
+* opening radius: 0.9951303601264954
+* closing radius: 4.734277248382568
+* temporal consistency neighbors: 15
+* threshold classification: 0.008214821107685566
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 37:100
+training cycle DM	Loss: 0.10845846181785739	Running time: 1473.213020324707 s
+training cycle MM	Loss: 0.07621375416329987	Running time: 1491.6690428256989 s
+training cycle TCM	Loss: 0.07177898068776584	Running time: 3419.874265193939 s
+training cycle CM	Loss: 0.14476354397448202	Running time: 3534.0822191238403 s
+
+Model saved (model_epoch_36.pth)
+
+Evaluating validation set
+validation loss: 0.13616168305802076
+validation accuracy: 86.12%
+validation DIS: 0.48344249589450744
+
+Main parameters of the network:
+* opening radius: 0.9958429932594299
+* closing radius: 4.746178150177002
+* temporal consistency neighbors: 15
+* threshold classification: 0.0029500264208763838
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 38:100
+training cycle DM	Loss: 0.1084633511465949	Running time: 1478.1157221794128 s
+training cycle MM	Loss: 0.07594607450974149	Running time: 1498.4117028713226 s
+training cycle TCM	Loss: 0.07139652831578792	Running time: 3414.464725971222 s
+training cycle CM	Loss: 0.14283281387592986	Running time: 3545.5437710285187 s
+
+Model saved (model_epoch_37.pth)
+
+Evaluating validation set
+validation loss: 0.14079939952910536
+validation accuracy: 85.63%
+validation DIS: 0.479108579761745
+
+Main parameters of the network:
+* opening radius: 0.9970299005508423
+* closing radius: 4.748372554779053
+* temporal consistency neighbors: 15
+* threshold classification: 0.003362318966537714
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 39:100
+training cycle DM	Loss: 0.10846083981362549	Running time: 1475.1643705368042 s
+training cycle MM	Loss: 0.07619667792743122	Running time: 1495.0398125648499 s
+training cycle TCM	Loss: 0.07177875640062241	Running time: 3434.247685432434 s
+training cycle CM	Loss: 0.14339081434944706	Running time: 3531.979880809784 s
+
+Model saved (model_epoch_38.pth)
+
+Evaluating validation set
+validation loss: 0.14909514563267834
+validation accuracy: 84.85%
+validation DIS: 0.4680222584964425
+
+Main parameters of the network:
+* opening radius: 0.9964314103126526
+* closing radius: 4.642703533172607
+* temporal consistency neighbors: 15
+* threshold classification: 0.0041731116361916065
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 40:100
+training cycle DM	Loss: 0.10846085477922414	Running time: 1478.1238555908203 s
+training cycle MM	Loss: 0.07611182976212051	Running time: 1500.5400445461273 s
+training cycle TCM	Loss: 0.07155311987738927	Running time: 3458.638194799423 s
+training cycle CM	Loss: 0.14407974203140606	Running time: 3524.257663488388 s
+
+Model saved (model_epoch_39.pth)
+
+Evaluating validation set
+validation loss: 0.146791985566433
+validation accuracy: 84.99%
+validation DIS: 0.48006817756360787
+
+Main parameters of the network:
+* opening radius: 0.9958435893058777
+* closing radius: 4.655534267425537
+* temporal consistency neighbors: 15
+* threshold classification: 0.0044042738154530525
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 41:100
+training cycle DM	Loss: 0.10846444142428605	Running time: 1481.9493856430054 s
+training cycle MM	Loss: 0.07618117763182601	Running time: 1505.933057308197 s
+training cycle TCM	Loss: 0.07165560062530606	Running time: 3483.5141291618347 s
+training cycle CM	Loss: 0.1440089305501393	Running time: 3503.234770298004 s
+
+Model saved (model_epoch_40.pth)
+
+Evaluating validation set
+validation loss: 0.16680590982227336
+validation accuracy: 82.78%
+validation DIS: 0.4582171460081439
+
+Main parameters of the network:
+* opening radius: 0.995642364025116
+* closing radius: 4.666438102722168
+* temporal consistency neighbors: 15
+* threshold classification: 0.006472507491707802
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 42:100
+training cycle DM	Loss: 0.10845960973082362	Running time: 1484.2660961151123 s
+training cycle MM	Loss: 0.07603216821277464	Running time: 1507.7421424388885 s
+training cycle TCM	Loss: 0.0713726879365771	Running time: 3508.9479541778564 s
+training cycle CM	Loss: 0.14461595099145627	Running time: 3485.4853703975677 s
+
+Model saved (model_epoch_41.pth)
+
+Evaluating validation set
+validation loss: 0.1421651620299718
+validation accuracy: 85.57%
+validation DIS: 0.4791866697101592
+
+Main parameters of the network:
+* opening radius: 0.9961068034172058
+* closing radius: 4.678600311279297
+* temporal consistency neighbors: 15
+* threshold classification: 0.004026781767606735
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 43:100
+training cycle DM	Loss: 0.10843532178047541	Running time: 1484.6005306243896 s
+training cycle MM	Loss: 0.07632012570780274	Running time: 1510.0135214328766 s
+training cycle TCM	Loss: 0.07187875856444038	Running time: 3536.385356903076 s
+training cycle CM	Loss: 0.144092903718251	Running time: 3469.2367734909058 s
+
+Model saved (model_epoch_42.pth)
+
+Evaluating validation set
+validation loss: 0.19437565776387236
+validation accuracy: 80.13%
+validation DIS: 0.45408364579793054
+
+Main parameters of the network:
+* opening radius: 0.995421290397644
+* closing radius: 4.686460018157959
+* temporal consistency neighbors: 15
+* threshold classification: 0.007522509898990393
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 44:100
+training cycle DM	Loss: 0.1084514753641309	Running time: 1484.8180811405182 s
+training cycle MM	Loss: 0.07585952171250372	Running time: 1506.8369770050049 s
+training cycle TCM	Loss: 0.07123987785794927	Running time: 3564.0764145851135 s
+training cycle CM	Loss: 0.14521397874866887	Running time: 3452.9012734889984 s
+
+Model saved (model_epoch_43.pth)
+
+Evaluating validation set
+validation loss: 0.14293187138205446
+validation accuracy: 85.43%
+validation DIS: 0.47938636177604566
+
+Main parameters of the network:
+* opening radius: 0.99700927734375
+* closing radius: 4.703341960906982
+* temporal consistency neighbors: 15
+* threshold classification: 0.003691943595185876
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 45:100
+training cycle DM	Loss: 0.10846381450021589	Running time: 1488.492779970169 s
+training cycle MM	Loss: 0.07618131627001472	Running time: 1512.1115047931671 s
+training cycle TCM	Loss: 0.07175464064086892	Running time: 3595.535391807556 s
+training cycle CM	Loss: 0.14315982168562347	Running time: 3429.698976755142 s
+
+Model saved (model_epoch_44.pth)
+
+Evaluating validation set
+validation loss: 0.19820324195718578
+validation accuracy: 79.46%
+validation DIS: 0.4379282188073511
+
+Main parameters of the network:
+* opening radius: 0.9965961575508118
+* closing radius: 4.714058876037598
+* temporal consistency neighbors: 15
+* threshold classification: 0.006973447278141975
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 46:100
+training cycle DM	Loss: 0.10845868598770451	Running time: 1485.8418357372284 s
+training cycle MM	Loss: 0.07621607224079403	Running time: 1508.1228585243225 s
+training cycle TCM	Loss: 0.07189604539826017	Running time: 3619.562668323517 s
+training cycle CM	Loss: 0.14556381423200995	Running time: 3406.248195171356 s
+
+Model saved (model_epoch_45.pth)
+
+Evaluating validation set
+validation loss: 0.15376900135554086
+validation accuracy: 84.30%
+validation DIS: 0.47637848900583624
+
+Main parameters of the network:
+* opening radius: 0.9947810173034668
+* closing radius: 4.713263988494873
+* temporal consistency neighbors: 15
+* threshold classification: 0.006424082908779383
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 47:100
+training cycle DM	Loss: 0.10847817720190898	Running time: 1487.0739872455597 s
+training cycle MM	Loss: 0.07621073186196185	Running time: 1508.3871610164642 s
+training cycle TCM	Loss: 0.07192622577375103	Running time: 3614.3985681533813 s
+training cycle CM	Loss: 0.14357343682280316	Running time: 3394.6758551597595 s
+
+Model saved (model_epoch_46.pth)
+
+Evaluating validation set
+validation loss: 0.14269783291989013
+validation accuracy: 85.38%
+validation DIS: 0.47699483658103936
+
+Main parameters of the network:
+* opening radius: 0.9968448877334595
+* closing radius: 4.736881256103516
+* temporal consistency neighbors: 15
+* threshold classification: 0.00311836670152843
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 48:100
+training cycle DM	Loss: 0.10845186633032722	Running time: 1485.741860151291 s
+training cycle MM	Loss: 0.07589365150678802	Running time: 1507.5741846561432 s
+training cycle TCM	Loss: 0.07128048947242782	Running time: 3601.6571702957153 s
+training cycle CM	Loss: 0.14400711052934084	Running time: 3387.0059661865234 s
+
+Model saved (model_epoch_47.pth)
+
+Evaluating validation set
+validation loss: 0.14554430543644656
+validation accuracy: 85.05%
+validation DIS: 0.4799793897791058
+
+Main parameters of the network:
+* opening radius: 0.9961270093917847
+* closing radius: 4.739621162414551
+* temporal consistency neighbors: 15
+* threshold classification: 0.004417253192514181
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 49:100
+training cycle DM	Loss: 0.10846090596269917	Running time: 1488.5185923576355 s
+training cycle MM	Loss: 0.07629543194698321	Running time: 1524.9493589401245 s
+training cycle TCM	Loss: 0.07190317243535402	Running time: 3564.1285948753357 s
+training cycle CM	Loss: 0.14330225426100404	Running time: 3371.5412814617157 s
+
+Model saved (model_epoch_48.pth)
+
+Evaluating validation set
+validation loss: 0.1544799755213677
+validation accuracy: 84.25%
+validation DIS: 0.4606875726384665
+
+Main parameters of the network:
+* opening radius: 0.9958477020263672
+* closing radius: 4.7401323318481445
+* temporal consistency neighbors: 15
+* threshold classification: 0.005362482275813818
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 50:100
+training cycle DM	Loss: 0.10845570668980882	Running time: 1480.6135239601135 s
+training cycle MM	Loss: 0.07586854691340311	Running time: 1546.6209628582 s
+training cycle TCM	Loss: 0.07121646939607833	Running time: 3533.739628314972 s
+training cycle CM	Loss: 0.14366555679357526	Running time: 3367.715523958206 s
+
+Model saved (model_epoch_49.pth)
+
+Evaluating validation set
+validation loss: 0.15936748284503605
+validation accuracy: 83.69%
+validation DIS: 0.4739649395217871
+
+Main parameters of the network:
+* opening radius: 0.9964154362678528
+* closing radius: 4.741762638092041
+* temporal consistency neighbors: 15
+* threshold classification: 0.005670861341059208
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 51:100
+training cycle DM	Loss: 0.1084676887537982	Running time: 1470.1976552009583 s
+training cycle MM	Loss: 0.07611240094577944	Running time: 1598.9181988239288 s
+training cycle TCM	Loss: 0.07163317904187345	Running time: 3499.295134782791 s
+training cycle CM	Loss: 0.1435914795611954	Running time: 3351.1043844223022 s
+
+Model saved (model_epoch_50.pth)
+
+Evaluating validation set
+validation loss: 0.14565564585509155
+validation accuracy: 85.27%
+validation DIS: 0.47592983784420795
+
+Main parameters of the network:
+* opening radius: 0.9969273209571838
+* closing radius: 4.749520301818848
+* temporal consistency neighbors: 15
+* threshold classification: 0.003661991795524955
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 52:100
+training cycle DM	Loss: 0.10846569419712633	Running time: 1480.8302538394928 s
+training cycle MM	Loss: 0.07624832156240134	Running time: 1591.8964397907257 s
+training cycle TCM	Loss: 0.07183583537526572	Running time: 3467.0453951358795 s
+training cycle CM	Loss: 0.14494746826595653	Running time: 3343.0244677066803 s
+
+Model saved (model_epoch_51.pth)
+
+Evaluating validation set
+validation loss: 0.155957004660122
+validation accuracy: 84.00%
+validation DIS: 0.4636387925401366
+
+Main parameters of the network:
+* opening radius: 0.9958227276802063
+* closing radius: 4.735759258270264
+* temporal consistency neighbors: 15
+* threshold classification: 0.0055721900425851345
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 53:100
+training cycle DM	Loss: 0.10845749057628012	Running time: 1490.6623508930206 s
+training cycle MM	Loss: 0.07580551116551096	Running time: 1581.9435060024261 s
+training cycle TCM	Loss: 0.07120618620105304	Running time: 3436.8598778247833 s
+training cycle CM	Loss: 0.14438482370381897	Running time: 3332.989979982376 s
+
+Model saved (model_epoch_52.pth)
+
+Evaluating validation set
+validation loss: 0.15277702722119602
+validation accuracy: 84.49%
+validation DIS: 0.47968803947900857
+
+Main parameters of the network:
+* opening radius: 0.9961052536964417
+* closing radius: 4.666565895080566
+* temporal consistency neighbors: 15
+* threshold classification: 0.005124663934111595
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 54:100
+training cycle DM	Loss: 0.10845410303489582	Running time: 1513.0095663070679 s
+training cycle MM	Loss: 0.09047011395161217	Running time: 1586.9451777935028 s
+training cycle TCM	Loss: 0.08674453943788027	Running time: 3412.66636633873 s
+training cycle CM	Loss: 0.14430734365692116	Running time: 3322.5009269714355 s
+
+Model saved (model_epoch_53.pth)
+
+Evaluating validation set
+validation loss: 0.1280733027288104
+validation accuracy: 85.52%
+validation DIS: 0.4669027312452979
+
+Main parameters of the network:
+* opening radius: 0.9894924759864807
+* closing radius: 1.4971979856491089
+* temporal consistency neighbors: 15
+* threshold classification: 0.0008892162004485726
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 55:100
+training cycle DM	Loss: 0.10846608213476233	Running time: 1538.7282819747925 s
+training cycle MM	Loss: 0.090372429981425	Running time: 1574.3632473945618 s
+training cycle TCM	Loss: 0.08488331494987295	Running time: 3391.1186079978943 s
+training cycle CM	Loss: 0.14009509912547383	Running time: 3334.1472787857056 s
+
+Model saved (model_epoch_54.pth)
+
+Evaluating validation set
+validation loss: 0.14376324864481363
+validation accuracy: 84.36%
+validation DIS: 0.42917514195690504
+
+Main parameters of the network:
+* opening radius: 0.9842399954795837
+* closing radius: 1.6409257650375366
+* temporal consistency neighbors: 15
+* threshold classification: 0.0015049570938572288
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 56:100
+training cycle DM	Loss: 0.10847174794287295	Running time: 1556.9370505809784 s
+training cycle MM	Loss: 0.08759712324855295	Running time: 1558.5651104450226 s
+training cycle TCM	Loss: 0.07341921337117877	Running time: 3392.4716770648956 s
+training cycle CM	Loss: 0.1438837202632518	Running time: 3365.2492656707764 s
+
+Model saved (model_epoch_55.pth)
+
+Evaluating validation set
+validation loss: 0.14279891722308466
+validation accuracy: 85.38%
+validation DIS: 0.4782311678266334
+
+Main parameters of the network:
+* opening radius: 0.9924594759941101
+* closing radius: 3.8283019065856934
+* temporal consistency neighbors: 15
+* threshold classification: 0.0031543930526822805
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 57:100
+training cycle DM	Loss: 0.10845126951465736	Running time: 1559.522399187088 s
+training cycle MM	Loss: 0.07815175223592165	Running time: 1539.3688366413116 s
+training cycle TCM	Loss: 0.07341892337274619	Running time: 3407.664123773575 s
+training cycle CM	Loss: 0.14453578582521687	Running time: 3388.809252977371 s
+
+Model saved (model_epoch_56.pth)
+
+Evaluating validation set
+validation loss: 0.15379476721123203
+validation accuracy: 84.41%
+validation DIS: 0.4676341009832619
+
+Main parameters of the network:
+* opening radius: 0.9904874563217163
+* closing radius: 3.8270857334136963
+* temporal consistency neighbors: 15
+* threshold classification: 0.004958166740834713
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 58:100
+training cycle DM	Loss: 0.10847330018273882	Running time: 1567.0470249652863 s
+training cycle MM	Loss: 0.07758359765684282	Running time: 1513.8742740154266 s
+training cycle TCM	Loss: 0.07275647406785436	Running time: 3402.6196784973145 s
+training cycle CM	Loss: 0.14537809402256643	Running time: 3408.147266626358 s
+
+Model saved (model_epoch_57.pth)
+
+Evaluating validation set
+validation loss: 0.15910490652815595
+validation accuracy: 83.75%
+validation DIS: 0.47021959238385685
+
+Main parameters of the network:
+* opening radius: 0.9905833005905151
+* closing radius: 3.8279025554656982
+* temporal consistency neighbors: 15
+* threshold classification: 0.005979032255709171
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 59:100
+training cycle DM	Loss: 0.10846477684942452	Running time: 1565.471033334732 s
+training cycle MM	Loss: 0.07777961909569599	Running time: 1501.230720281601 s
+training cycle TCM	Loss: 0.07325037492588378	Running time: 3409.124163389206 s
+training cycle CM	Loss: 0.14393087639304117	Running time: 3438.7521975040436 s
+
+Model saved (model_epoch_58.pth)
+
+Evaluating validation set
+validation loss: 0.14189990940972852
+validation accuracy: 85.43%
+validation DIS: 0.48186308140484985
+
+Main parameters of the network:
+* opening radius: 0.9918895363807678
+* closing radius: 3.8317482471466064
+* temporal consistency neighbors: 15
+* threshold classification: 0.0032525770366191864
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 60:100
+training cycle DM	Loss: 0.10845589436792039	Running time: 1547.4639766216278 s
+training cycle MM	Loss: 0.0779885883113319	Running time: 1500.4344415664673 s
+training cycle TCM	Loss: 0.07321820508934104	Running time: 3409.071930170059 s
+training cycle CM	Loss: 0.14506949621782111	Running time: 3460.131110906601 s
+
+Model saved (model_epoch_59.pth)
+
+Evaluating validation set
+validation loss: 0.14898027470122135
+validation accuracy: 84.85%
+validation DIS: 0.4802945895104529
+
+Main parameters of the network:
+* opening radius: 0.9904979467391968
+* closing radius: 3.830967903137207
+* temporal consistency neighbors: 15
+* threshold classification: 0.004290961194783449
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 61:100
+training cycle DM	Loss: 0.1084687321935151	Running time: 1524.5096702575684 s
+training cycle MM	Loss: 0.07777322701858105	Running time: 1502.5115959644318 s
+training cycle TCM	Loss: 0.07294291136101334	Running time: 3417.25985789299 s
+training cycle CM	Loss: 0.14475514346296486	Running time: 3483.4153921604156 s
+
+Model saved (model_epoch_60.pth)
+
+Evaluating validation set
+validation loss: 0.14428748008062162
+validation accuracy: 85.27%
+validation DIS: 0.4796344069312386
+
+Main parameters of the network:
+* opening radius: 0.9905192255973816
+* closing radius: 3.833153486251831
+* temporal consistency neighbors: 15
+* threshold classification: 0.004149647429585457
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 62:100
+training cycle DM	Loss: 0.10847312562771745	Running time: 1508.4991002082825 s
+training cycle MM	Loss: 0.07766236854767478	Running time: 1503.5082931518555 s
+training cycle TCM	Loss: 0.07284842429314038	Running time: 3426.495261669159 s
+training cycle CM	Loss: 0.14450236392237656	Running time: 3509.061210870743 s
+
+Model saved (model_epoch_61.pth)
+
+Evaluating validation set
+validation loss: 0.157063692965966
+validation accuracy: 84.02%
+validation DIS: 0.47327118984555644
+
+Main parameters of the network:
+* opening radius: 0.9908597469329834
+* closing radius: 3.837554454803467
+* temporal consistency neighbors: 15
+* threshold classification: 0.00541179021820426
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 63:100
+training cycle DM	Loss: 0.1084609899649749	Running time: 1483.661248922348 s
+training cycle MM	Loss: 0.07793550034431188	Running time: 1501.0888538360596 s
+training cycle TCM	Loss: 0.07318043135160501	Running time: 3428.3787865638733 s
+training cycle CM	Loss: 0.14469506397443252	Running time: 3535.4800176620483 s
+
+Model saved (model_epoch_62.pth)
+
+Evaluating validation set
+validation loss: 0.15565063113161134
+validation accuracy: 84.22%
+validation DIS: 0.47045075499898187
+
+Main parameters of the network:
+* opening radius: 0.9906962513923645
+* closing radius: 3.8341355323791504
+* temporal consistency neighbors: 15
+* threshold classification: 0.005166506860405207
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 64:100
+training cycle DM	Loss: 0.108458355890738	Running time: 1475.031643629074 s
+training cycle MM	Loss: 0.0778201155867931	Running time: 1492.675259590149 s
+training cycle TCM	Loss: 0.07309443325542352	Running time: 3415.0137894153595 s
+training cycle CM	Loss: 0.14527036693551384	Running time: 3526.4468607902527 s
+
+Model saved (model_epoch_63.pth)
+
+Evaluating validation set
+validation loss: 0.1378564173619766
+validation accuracy: 85.93%
+validation DIS: 0.48118689869353215
+
+Main parameters of the network:
+* opening radius: 0.9910455942153931
+* closing radius: 3.8365561962127686
+* temporal consistency neighbors: 15
+* threshold classification: 0.0032139813993126154
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 65:100
+training cycle DM	Loss: 0.10845806374743178	Running time: 1466.2502529621124 s
+training cycle MM	Loss: 0.07751681897185139	Running time: 1483.1587972640991 s
+training cycle TCM	Loss: 0.07264789713211321	Running time: 3420.5390825271606 s
+training cycle CM	Loss: 0.14547493951442036	Running time: 3557.035017967224 s
+
+Model saved (model_epoch_64.pth)
+
+Evaluating validation set
+validation loss: 0.15137668526720552
+validation accuracy: 84.47%
+validation DIS: 0.4809622379754277
+
+Main parameters of the network:
+* opening radius: 0.9907543063163757
+* closing radius: 3.816263437271118
+* temporal consistency neighbors: 15
+* threshold classification: 0.00488117104396224
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 66:100
+training cycle DM	Loss: 0.10846608082990389	Running time: 1478.9651012420654 s
+training cycle MM	Loss: 0.07751269657265496	Running time: 1497.6450488567352 s
+training cycle TCM	Loss: 0.07286400794461513	Running time: 3439.525960445404 s
+training cycle CM	Loss: 0.14437531088976294	Running time: 3531.8828382492065 s
+
+Model saved (model_epoch_65.pth)
+
+Evaluating validation set
+validation loss: 0.16031296697778213
+validation accuracy: 83.64%
+validation DIS: 0.4752928773707261
+
+Main parameters of the network:
+* opening radius: 0.9919313192367554
+* closing radius: 3.8051185607910156
+* temporal consistency neighbors: 15
+* threshold classification: 0.005011695437133312
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 67:100
+training cycle DM	Loss: 0.10846397881572312	Running time: 1477.4388449192047 s
+training cycle MM	Loss: 0.0783787079266197	Running time: 1498.8375263214111 s
+training cycle TCM	Loss: 0.0736562286859691	Running time: 3470.5118782520294 s
+training cycle CM	Loss: 0.14526024806475119	Running time: 3514.345916032791 s
+
+Model saved (model_epoch_66.pth)
+
+Evaluating validation set
+validation loss: 0.1426674660085658
+validation accuracy: 85.41%
+validation DIS: 0.4806648060141457
+
+Main parameters of the network:
+* opening radius: 0.9885458946228027
+* closing radius: 3.384356737136841
+* temporal consistency neighbors: 15
+* threshold classification: 0.0036351922899484634
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 68:100
+training cycle DM	Loss: 0.1084600875023249	Running time: 1478.5063107013702 s
+training cycle MM	Loss: 0.07864468388360095	Running time: 1503.6597414016724 s
+training cycle TCM	Loss: 0.0737058090526812	Running time: 3494.427161216736 s
+training cycle CM	Loss: 0.14434647899070058	Running time: 3499.9677612781525 s
+
+Model saved (model_epoch_67.pth)
+
+Evaluating validation set
+validation loss: 0.14289415466101799
+validation accuracy: 85.52%
+validation DIS: 0.4805049683542989
+
+Main parameters of the network:
+* opening radius: 0.988216757774353
+* closing radius: 3.4009618759155273
+* temporal consistency neighbors: 15
+* threshold classification: 0.00370598747394979
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 69:100
+training cycle DM	Loss: 0.1084512441706013	Running time: 1478.5292847156525 s
+training cycle MM	Loss: 0.07832942943415931	Running time: 1503.7631974220276 s
+training cycle TCM	Loss: 0.07333639550007498	Running time: 3513.2836289405823 s
+training cycle CM	Loss: 0.1441890752424757	Running time: 3482.0148482322693 s
+
+Model saved (model_epoch_68.pth)
+
+Evaluating validation set
+validation loss: 0.13268563697532937
+validation accuracy: 86.37%
+validation DIS: 0.48942121808034716
+
+Main parameters of the network:
+* opening radius: 0.9884675145149231
+* closing radius: 3.3956351280212402
+* temporal consistency neighbors: 15
+* threshold classification: 0.0031611123122274876
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 70:100
+training cycle DM	Loss: 0.10845634863586039	Running time: 1481.4234318733215 s
+training cycle MM	Loss: 0.07846992577048573	Running time: 1506.7418344020844 s
+training cycle TCM	Loss: 0.07344447604537865	Running time: 3537.924048423767 s
+training cycle CM	Loss: 0.14435590212260624	Running time: 3464.759598493576 s
+
+Model saved (model_epoch_69.pth)
+
+Evaluating validation set
+validation loss: 0.14360803155368307
+validation accuracy: 85.43%
+validation DIS: 0.47938636177604566
+
+Main parameters of the network:
+* opening radius: 0.9880892038345337
+* closing radius: 3.3832204341888428
+* temporal consistency neighbors: 15
+* threshold classification: 0.003992130048573017
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 71:100
+training cycle DM	Loss: 0.10843003236361452	Running time: 1477.9220793247223 s
+training cycle MM	Loss: 0.07811705915911778	Running time: 1501.8244636058807 s
+training cycle TCM	Loss: 0.07301364840407457	Running time: 3559.969888448715 s
+training cycle CM	Loss: 0.14521987573525688	Running time: 3446.133554458618 s
+
+Model saved (model_epoch_70.pth)
+
+Evaluating validation set
+validation loss: 0.1318645684934009
+validation accuracy: 86.54%
+validation DIS: 0.48799703969170694
+
+Main parameters of the network:
+* opening radius: 0.9882556796073914
+* closing radius: 3.371941089630127
+* temporal consistency neighbors: 15
+* threshold classification: 0.0035220535937696695
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 72:100
+training cycle DM	Loss: 0.1084659248751563	Running time: 1481.5093944072723 s
+training cycle MM	Loss: 0.07832948023403014	Running time: 1510.8814215660095 s
+training cycle TCM	Loss: 0.07332613526705947	Running time: 3598.2742619514465 s
+training cycle CM	Loss: 0.1446560421618313	Running time: 3425.93741106987 s
+
+Model saved (model_epoch_71.pth)
+
+Evaluating validation set
+validation loss: 0.15180140036555315
+validation accuracy: 84.44%
+validation DIS: 0.48101182349863697
+
+Main parameters of the network:
+* opening radius: 0.9884181618690491
+* closing radius: 3.375821352005005
+* temporal consistency neighbors: 15
+* threshold classification: 0.0045101819559931755
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 73:100
+training cycle DM	Loss: 0.1084695578024194	Running time: 1478.8737041950226 s
+training cycle MM	Loss: 0.0864513310820267	Running time: 1502.8900475502014 s
+training cycle TCM	Loss: 0.08439411893291003	Running time: 3605.3913712501526 s
+training cycle CM	Loss: 0.14183135813482733	Running time: 3396.2980382442474 s
+
+Model saved (model_epoch_72.pth)
+
+Evaluating validation set
+validation loss: 0.14345982914929714
+validation accuracy: 84.38%
+validation DIS: 0.43030021761490755
+
+Main parameters of the network:
+* opening radius: 0.9844196438789368
+* closing radius: 1.615696668624878
+* temporal consistency neighbors: 15
+* threshold classification: 0.0015453834785148501
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 74:100
+training cycle DM	Loss: 0.10846608759986388	Running time: 1479.0173742771149 s
+training cycle MM	Loss: 0.08827101662553645	Running time: 1502.450760602951 s
+training cycle TCM	Loss: 0.07652716710171968	Running time: 3603.8023245334625 s
+training cycle CM	Loss: 0.14317154532670529	Running time: 3390.188107728958 s
+
+Model saved (model_epoch_73.pth)
+
+Evaluating validation set
+validation loss: 0.13572963820746464
+validation accuracy: 85.77%
+validation DIS: 0.4888706443238773
+
+Main parameters of the network:
+* opening radius: 0.9844092130661011
+* closing radius: 2.8377811908721924
+* temporal consistency neighbors: 15
+* threshold classification: 0.0021597796585410833
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 75:100
+training cycle DM	Loss: 0.10844981161323754	Running time: 1493.100061416626 s
+training cycle MM	Loss: 0.07955684755903644	Running time: 1500.6337127685547 s
+training cycle TCM	Loss: 0.07245478824113628	Running time: 3604.8947081565857 s
+training cycle CM	Loss: 0.14545280685291143	Running time: 3375.8862221240997 s
+
+Model saved (model_epoch_74.pth)
+
+Evaluating validation set
+validation loss: 0.1380847064507525
+validation accuracy: 85.85%
+validation DIS: 0.4788064431276701
+
+Main parameters of the network:
+* opening radius: 0.991602897644043
+* closing radius: 3.902604341506958
+* temporal consistency neighbors: 15
+* threshold classification: 0.0039034890942275524
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 76:100
+training cycle DM	Loss: 0.10846443763858563	Running time: 1483.54998421669 s
+training cycle MM	Loss: 0.07743909102335975	Running time: 1516.3437285423279 s
+training cycle TCM	Loss: 0.07255095444165681	Running time: 3556.966469526291 s
+training cycle CM	Loss: 0.1447223480301632	Running time: 3368.0154931545258 s
+
+Model saved (model_epoch_75.pth)
+
+Evaluating validation set
+validation loss: 0.14570381066440566
+validation accuracy: 85.13%
+validation DIS: 0.47984811379122794
+
+Main parameters of the network:
+* opening radius: 0.9909011721611023
+* closing radius: 3.8948304653167725
+* temporal consistency neighbors: 15
+* threshold classification: 0.004510941915214062
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 77:100
+training cycle DM	Loss: 0.10846356306124377	Running time: 1480.493147611618 s
+training cycle MM	Loss: 0.07786227937687087	Running time: 1550.6571536064148 s
+training cycle TCM	Loss: 0.07301209483280396	Running time: 3535.9864916801453 s
+training cycle CM	Loss: 0.14440231286285315	Running time: 3361.839599609375 s
+
+Model saved (model_epoch_76.pth)
+
+Evaluating validation set
+validation loss: 0.14248645329889792
+validation accuracy: 85.43%
+validation DIS: 0.47938636177604566
+
+Main parameters of the network:
+* opening radius: 0.990171492099762
+* closing radius: 3.8809258937835693
+* temporal consistency neighbors: 15
+* threshold classification: 0.004072073847055435
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 78:100
+training cycle DM	Loss: 0.10844540835232348	Running time: 1473.1963908672333 s
+training cycle MM	Loss: 0.07804396737668966	Running time: 1588.5583050251007 s
+training cycle TCM	Loss: 0.07337468616968258	Running time: 3504.4750185012817 s
+training cycle CM	Loss: 0.1441166236593283	Running time: 3349.7025027275085 s
+
+Model saved (model_epoch_77.pth)
+
+Evaluating validation set
+validation loss: 0.14750055341675208
+validation accuracy: 84.96%
+validation DIS: 0.48011295238278645
+
+Main parameters of the network:
+* opening radius: 0.9908425211906433
+* closing radius: 3.878049850463867
+* temporal consistency neighbors: 15
+* threshold classification: 0.003913793712854385
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 79:100
+training cycle DM	Loss: 0.10847396502623687	Running time: 1484.3903167247772 s
+training cycle MM	Loss: 0.07771149799932499	Running time: 1590.6040496826172 s
+training cycle TCM	Loss: 0.07290999374908852	Running time: 3471.026745557785 s
+training cycle CM	Loss: 0.1451090948474827	Running time: 3341.5134665966034 s
+
+Model saved (model_epoch_78.pth)
+
+Evaluating validation set
+validation loss: 0.1471777110256666
+validation accuracy: 84.99%
+validation DIS: 0.48006817756360787
+
+Main parameters of the network:
+* opening radius: 0.9908249974250793
+* closing radius: 3.8684864044189453
+* temporal consistency neighbors: 15
+* threshold classification: 0.0042723906226456165
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 80:100
+training cycle DM	Loss: 0.10845187519853179	Running time: 1495.3926520347595 s
+training cycle MM	Loss: 0.07779203621217527	Running time: 1587.7716476917267 s
+training cycle TCM	Loss: 0.07300034220781695	Running time: 3437.3955416679382 s
+training cycle CM	Loss: 0.1446855387555229	Running time: 3335.0119643211365 s
+
+Model saved (model_epoch_79.pth)
+
+Evaluating validation set
+validation loss: 0.15287426523394185
+validation accuracy: 84.36%
+validation DIS: 0.4787168115177813
+
+Main parameters of the network:
+* opening radius: 0.9906625747680664
+* closing radius: 3.8520853519439697
+* temporal consistency neighbors: 15
+* threshold classification: 0.004811769351363182
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 81:100
+training cycle DM	Loss: 0.10846435286306046	Running time: 1506.9164922237396 s
+training cycle MM	Loss: 0.07758132418265214	Running time: 1586.0747244358063 s
+training cycle TCM	Loss: 0.07274354539045698	Running time: 3406.3540332317352 s
+training cycle CM	Loss: 0.1443915689709312	Running time: 3324.9117710590363 s
+
+Model saved (model_epoch_80.pth)
+
+Evaluating validation set
+validation loss: 0.14040318018840292
+validation accuracy: 85.79%
+validation DIS: 0.4788804428382004
+
+Main parameters of the network:
+* opening radius: 0.9907211661338806
+* closing radius: 3.840256690979004
+* temporal consistency neighbors: 15
+* threshold classification: 0.003985928371548653
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 82:100
+training cycle DM	Loss: 0.10846992341247765	Running time: 1549.2523212432861 s
+training cycle MM	Loss: 0.0776179308771483	Running time: 1573.5345885753632 s
+training cycle TCM	Loss: 0.07277587595193478	Running time: 3393.6532061100006 s
+training cycle CM	Loss: 0.14540030288384778	Running time: 3338.56622171402 s
+
+Model saved (model_epoch_81.pth)
+
+Evaluating validation set
+validation loss: 0.16042131615767322
+validation accuracy: 83.61%
+validation DIS: 0.4705231614960094
+
+Main parameters of the network:
+* opening radius: 0.9906237721443176
+* closing radius: 3.8295400142669678
+* temporal consistency neighbors: 15
+* threshold classification: 0.006035361904650927
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 83:100
+training cycle DM	Loss: 0.10846136022661183	Running time: 1550.6444249153137 s
+training cycle MM	Loss: 0.07750504839460592	Running time: 1554.1029598712921 s
+training cycle TCM	Loss: 0.07268465798480335	Running time: 3397.3819394111633 s
+training cycle CM	Loss: 0.14585363408139534	Running time: 3363.718637943268 s
+
+Model saved (model_epoch_82.pth)
+
+Evaluating validation set
+validation loss: 0.15743890163144048
+validation accuracy: 83.97%
+validation DIS: 0.47581224997385524
+
+Main parameters of the network:
+* opening radius: 0.9912073016166687
+* closing radius: 3.835871458053589
+* temporal consistency neighbors: 15
+* threshold classification: 0.005381827242672443
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 84:100
+training cycle DM	Loss: 0.10847203039639705	Running time: 1562.8864662647247 s
+training cycle MM	Loss: 0.07758412003617834	Running time: 1536.9072897434235 s
+training cycle TCM	Loss: 0.07273301891415311	Running time: 3400.09965634346 s
+training cycle CM	Loss: 0.1452060681686226	Running time: 3391.329655647278 s
+
+Model saved (model_epoch_83.pth)
+
+Evaluating validation set
+validation loss: 0.15322041272472728
+validation accuracy: 84.36%
+validation DIS: 0.48116209437131074
+
+Main parameters of the network:
+* opening radius: 0.9902839660644531
+* closing radius: 3.8075969219207764
+* temporal consistency neighbors: 15
+* threshold classification: 0.005301324184983969
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 85:100
+training cycle DM	Loss: 0.10845853530877346	Running time: 1569.8743424415588 s
+training cycle MM	Loss: 0.0779779861847291	Running time: 1518.39218211174 s
+training cycle TCM	Loss: 0.0733821915445443	Running time: 3404.0329575538635 s
+training cycle CM	Loss: 0.14414276536018536	Running time: 3420.311887741089 s
+
+Model saved (model_epoch_84.pth)
+
+Evaluating validation set
+validation loss: 0.1621574417849988
+validation accuracy: 83.53%
+validation DIS: 0.4527198812327037
+
+Main parameters of the network:
+* opening radius: 0.9912047386169434
+* closing radius: 3.8724446296691895
+* temporal consistency neighbors: 15
+* threshold classification: 0.005529092159122229
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 86:100
+training cycle DM	Loss: 0.10846812688015603	Running time: 1562.2875566482544 s
+training cycle MM	Loss: 0.07746426237696731	Running time: 1502.564374446869 s
+training cycle TCM	Loss: 0.07262312060426993	Running time: 3411.1280958652496 s
+training cycle CM	Loss: 0.1454010746334742	Running time: 3443.3832268714905 s
+
+Model saved (model_epoch_85.pth)
+
+Evaluating validation set
+validation loss: 0.14055468699975154
+validation accuracy: 85.74%
+validation DIS: 0.47895546583561943
+
+Main parameters of the network:
+* opening radius: 0.9910134077072144
+* closing radius: 3.8387913703918457
+* temporal consistency neighbors: 15
+* threshold classification: 0.003965673036873341
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 87:100
+training cycle DM	Loss: 0.10846636331967405	Running time: 1542.3008682727814 s
+training cycle MM	Loss: 0.07746945944891588	Running time: 1503.1311016082764 s
+training cycle TCM	Loss: 0.07263770079857788	Running time: 3408.030383825302 s
+training cycle CM	Loss: 0.14503670399440807	Running time: 3464.0630502700806 s
+
+Model saved (model_epoch_86.pth)
+
+Evaluating validation set
+validation loss: 0.15470044324650756
+validation accuracy: 84.30%
+validation DIS: 0.48126353608325606
+
+Main parameters of the network:
+* opening radius: 0.9905855059623718
+* closing radius: 3.8305420875549316
+* temporal consistency neighbors: 15
+* threshold classification: 0.005446476396173239
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 88:100
+training cycle DM	Loss: 0.10846644801062506	Running time: 1519.306155204773 s
+training cycle MM	Loss: 0.0774667758736256	Running time: 1505.2385458946228 s
+training cycle TCM	Loss: 0.07257585616483853	Running time: 3414.057824611664 s
+training cycle CM	Loss: 0.1457618212853376	Running time: 3490.252867460251 s
+
+Model saved (model_epoch_87.pth)
+
+Evaluating validation set
+validation loss: 0.14237156371033322
+validation accuracy: 85.38%
+validation DIS: 0.4794680241407609
+
+Main parameters of the network:
+* opening radius: 0.9905270338058472
+* closing radius: 3.8206863403320312
+* temporal consistency neighbors: 15
+* threshold classification: 0.004487660247832537
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 89:100
+training cycle DM	Loss: 0.10845288193306407	Running time: 1501.520775794983 s
+training cycle MM	Loss: 0.07792006873399825	Running time: 1501.9930408000946 s
+training cycle TCM	Loss: 0.07337964640844893	Running time: 3420.5615622997284 s
+training cycle CM	Loss: 0.14457516649959262	Running time: 3513.533285856247 s
+
+Model saved (model_epoch_88.pth)
+
+Evaluating validation set
+validation loss: 0.1345479194404782
+validation accuracy: 86.01%
+validation DIS: 0.49231751684459624
+
+Main parameters of the network:
+* opening radius: 0.9915151596069336
+* closing radius: 3.84409236907959
+* temporal consistency neighbors: 15
+* threshold classification: 0.0026547550223767757
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 90:100
+training cycle DM	Loss: 0.10845883853532172	Running time: 1484.8279592990875 s
+training cycle MM	Loss: 0.07766173424752983	Running time: 1503.7649841308594 s
+training cycle TCM	Loss: 0.07281009764989485	Running time: 3414.3637330532074 s
+training cycle CM	Loss: 0.14485661975447506	Running time: 3530.637976169586 s
+
+Model saved (model_epoch_89.pth)
+
+Evaluating validation set
+validation loss: 0.1648641350746483
+validation accuracy: 83.22%
+validation DIS: 0.4654161758856561
+
+Main parameters of the network:
+* opening radius: 0.9904627799987793
+* closing radius: 3.8098411560058594
+* temporal consistency neighbors: 15
+* threshold classification: 0.00647257873788476
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 91:100
+training cycle DM	Loss: 0.10847501587223363	Running time: 1477.080267906189 s
+training cycle MM	Loss: 0.07731744811744304	Running time: 1497.9269535541534 s
+training cycle TCM	Loss: 0.0708471430143212	Running time: 3429.257209777832 s
+training cycle CM	Loss: 0.14320224123396547	Running time: 3537.8621003627777 s
+
+Model saved (model_epoch_90.pth)
+
+Evaluating validation set
+validation loss: 0.1466941619228911
+validation accuracy: 85.05%
+validation DIS: 0.46890759095366974
+
+Main parameters of the network:
+* opening radius: 0.9985918402671814
+* closing radius: 5.184632778167725
+* temporal consistency neighbors: 15
+* threshold classification: 0.003726931056007743
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 92:100
+training cycle DM	Loss: 0.10845832935056171	Running time: 1479.1448225975037 s
+training cycle MM	Loss: 0.07483383042284766	Running time: 1499.9384965896606 s
+training cycle TCM	Loss: 0.07055326308332775	Running time: 3436.7682859897614 s
+training cycle CM	Loss: 0.14267651059540357	Running time: 3546.166217327118 s
+
+Model saved (model_epoch_91.pth)
+
+Evaluating validation set
+validation loss: 0.13198841338280853
+validation accuracy: 86.24%
+validation DIS: 0.5083981434267456
+
+Main parameters of the network:
+* opening radius: 0.9988759756088257
+* closing radius: 5.196251392364502
+* temporal consistency neighbors: 15
+* threshold classification: 0.0022297631949186325
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 93:100
+training cycle DM	Loss: 0.10845412180230424	Running time: 1482.7691507339478 s
+training cycle MM	Loss: 0.07495580073244669	Running time: 1503.6927511692047 s
+training cycle TCM	Loss: 0.07074443992868275	Running time: 3459.4719495773315 s
+training cycle CM	Loss: 0.1428582140746026	Running time: 3528.1890375614166 s
+
+Model saved (model_epoch_92.pth)
+
+Evaluating validation set
+validation loss: 0.14462930267387591
+validation accuracy: 85.24%
+validation DIS: 0.47473977316029037
+
+Main parameters of the network:
+* opening radius: 0.9986624717712402
+* closing radius: 5.204595565795898
+* temporal consistency neighbors: 15
+* threshold classification: 0.0034928061068058014
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 94:100
+training cycle DM	Loss: 0.10845133388767371	Running time: 1482.2622373104095 s
+training cycle MM	Loss: 0.07518009144309405	Running time: 1502.7749619483948 s
+training cycle TCM	Loss: 0.07097029006410692	Running time: 3474.8713912963867 s
+training cycle CM	Loss: 0.143038517369433	Running time: 3506.1363682746887 s
+
+Model saved (model_epoch_93.pth)
+
+Evaluating validation set
+validation loss: 0.14930820985487583
+validation accuracy: 84.88%
+validation DIS: 0.4655244275283519
+
+Main parameters of the network:
+* opening radius: 0.9976281523704529
+* closing radius: 5.20883321762085
+* temporal consistency neighbors: 15
+* threshold classification: 0.00466994708403945
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 95:100
+training cycle DM	Loss: 0.10846438564561509	Running time: 1481.1714398860931 s
+training cycle MM	Loss: 0.07499735049198608	Running time: 1504.6008250713348 s
+training cycle TCM	Loss: 0.07076926961021578	Running time: 3514.031391143799 s
+training cycle CM	Loss: 0.1437176966745816	Running time: 3489.3017275333405 s
+
+Model saved (model_epoch_94.pth)
+
+Evaluating validation set
+validation loss: 0.15702921162214387
+validation accuracy: 84.08%
+validation DIS: 0.4538054292749808
+
+Main parameters of the network:
+* opening radius: 0.9982063174247742
+* closing radius: 5.221170902252197
+* temporal consistency neighbors: 15
+* threshold classification: 0.0056259422563016415
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 96:100
+training cycle DM	Loss: 0.1084619134020161	Running time: 1478.3624110221863 s
+training cycle MM	Loss: 0.0751124156900757	Running time: 1502.8371529579163 s
+training cycle TCM	Loss: 0.07093318972660186	Running time: 3537.0310184955597 s
+training cycle CM	Loss: 0.1440485481764686	Running time: 3465.932011127472 s
+
+Model saved (model_epoch_95.pth)
+
+Evaluating validation set
+validation loss: 0.1510153089151867
+validation accuracy: 84.77%
+validation DIS: 0.46206483544921095
+
+Main parameters of the network:
+* opening radius: 0.9981316924095154
+* closing radius: 5.231500625610352
+* temporal consistency neighbors: 15
+* threshold classification: 0.004576514940708876
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 97:100
+training cycle DM	Loss: 0.10846675674657563	Running time: 1482.1134917736053 s
+training cycle MM	Loss: 0.07502855121183234	Running time: 1504.5999252796173 s
+training cycle TCM	Loss: 0.07085496947745537	Running time: 3339.9089834690094 s
+training cycle CM	Loss: 0.14251371158870701	Running time: 3201.9963796138763 s
+
+Model saved (model_epoch_96.pth)
+
+Evaluating validation set
+validation loss: 0.15560079596919832
+validation accuracy: 84.16%
+validation DIS: 0.45844609196936315
+
+Main parameters of the network:
+* opening radius: 0.9987861514091492
+* closing radius: 5.244948863983154
+* temporal consistency neighbors: 15
+* threshold classification: 0.004664629697799683
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 98:100
+training cycle DM	Loss: 0.10846298504922841	Running time: 1266.3233065605164 s
+training cycle MM	Loss: 0.07489807539594334	Running time: 1290.1056377887726 s
+training cycle TCM	Loss: 0.07082408247329475	Running time: 3266.480568885803 s
+training cycle CM	Loss: 0.14136493050897214	Running time: 3203.8808007240295 s
+
+Model saved (model_epoch_97.pth)
+
+Evaluating validation set
+validation loss: 0.1352187181226505
+validation accuracy: 86.21%
+validation DIS: 0.47835041980133414
+
+Main parameters of the network:
+* opening radius: 0.9996595978736877
+* closing radius: 5.259860038757324
+* temporal consistency neighbors: 15
+* threshold classification: 0.002328723669052124
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 99:100
+training cycle DM	Loss: 0.10846397930303135	Running time: 1263.6024527549744 s
+training cycle MM	Loss: 0.07504726856393186	Running time: 1284.735092163086 s
+training cycle TCM	Loss: 0.07084887446414025	Running time: 3265.6317863464355 s
+training cycle CM	Loss: 0.1429310398359452	Running time: 3202.1635172367096 s
+
+Model saved (model_epoch_98.pth)
+
+Evaluating validation set
+validation loss: 0.14566010401759372
+validation accuracy: 85.10%
+validation DIS: 0.47127097084203995
+
+Main parameters of the network:
+* opening radius: 0.9985624551773071
+* closing radius: 5.253140926361084
+* temporal consistency neighbors: 15
+* threshold classification: 0.0035834757145494223
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
+****************************************************************************************************
+
+Epoch 100:100
+training cycle DM	Loss: 0.10846716812333546	Running time: 1262.4827377796173 s
+training cycle MM	Loss: 0.07491592150886317	Running time: 1286.3478853702545 s
+training cycle TCM	Loss: 0.07067207099665783	Running time: 3265.7857909202576 s
+training cycle CM	Loss: 0.14240947963921027	Running time: 3205.8505771160126 s
+
+Model saved (model_epoch_99.pth)
+
+Evaluating validation set
+validation loss: 0.14764820847149998
+validation accuracy: 84.99%
+validation DIS: 0.4653253099758221
+
+Main parameters of the network:
+* opening radius: 0.9988884925842285
+* closing radius: 5.263312339782715
+* temporal consistency neighbors: 15
+* threshold classification: 0.0037942121271044016
+
+
+Pickles with results saved successfully (training_logs/fold_2_ablation_modification1/results.pickle)
