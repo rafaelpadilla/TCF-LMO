@@ -1,0 +1,245 @@
+Test initialized at: 2022-April-25 14:49:06
+
+########################################################################################################################
+Parameters:
+fold: 7
+alignment: temporal
+ablation: modification1
+dir_pth: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/training_logs/training_results_modification1/fold_7_ablation_modification1
+fp_pkl: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/training_logs/training_results_modification1/fold_7_ablation_modification1/results.pickle
+fps: 5
+quality: 6
+dir_out: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1
+device: 0
+seed: 123
+quiet: False
+save_videos: True
+save_frames: True
+summarize_on: True
+warnings_on: True
+########################################################################################################################
+Attempt to run on device: 0
+Running on cuda:0
+########################################################################################################################
+A total of 100 validation epochs were found.
+Best epoch based on the validation DIS: 92
+Epoch 92 reached a validation DIS=0.3822
+Running model model_epoch_92.pth on the testing set.
+########################################################################################################################
+Testing dataset (fold 7) loaded with 1206 samples:
+Positive samples: 904
+Negative samples: 302
+Target objects: shoe
+########################################################################################################################
+
+Evaluating video temporal_aling_obj-video35 (201 frames -> positives: 157, negatives: 44)
+Video output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video35.avi
+Frames output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video35/
+Computed metrics:
+mean_loss: 0.2189
+* Frame-level:
+	* TP rate: 1.0000
+	* FP rate: 1.0000
+	* DIS: 1.0000
+	* Accuracy: 0.7811
+* Pixel-level:
+	* TP rate: 0.9745
+	* FP rate: 1.0000
+	* DIS: 1.0003
+	* Accuracy: 0.4274
+------------------------------------------------------------------------------------------------------------------------
+
+Evaluating video temporal_aling_obj-video36 (201 frames -> positives: 149, negatives: 52)
+Video output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video36.avi
+Frames output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video36/
+Computed metrics:
+mean_loss: 0.2587
+* Frame-level:
+	* TP rate: 1.0000
+	* FP rate: 1.0000
+	* DIS: 1.0000
+	* Accuracy: 0.7413
+* Pixel-level:
+	* TP rate: 1.0000
+	* FP rate: 1.0000
+	* DIS: 1.0000
+	* Accuracy: 0.4257
+------------------------------------------------------------------------------------------------------------------------
+
+Evaluating video temporal_aling_obj-video34 (201 frames -> positives: 136, negatives: 65)
+Video output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video34.avi
+Frames output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video34/
+Computed metrics:
+mean_loss: 0.0541
+* Frame-level:
+	* TP rate: 1.0000
+	* FP rate: 0.1692
+	* DIS: 0.1692
+	* Accuracy: 0.9453
+* Pixel-level:
+	* TP rate: 1.0000
+	* FP rate: 0.0896
+	* DIS: 0.0896
+	* Accuracy: 0.9104
+------------------------------------------------------------------------------------------------------------------------
+
+Evaluating video temporal_aling_obj-video09 (201 frames -> positives: 146, negatives: 55)
+Video output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video09.avi
+Frames output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video09/
+Computed metrics:
+mean_loss: 0.2736
+* Frame-level:
+	* TP rate: 1.0000
+	* FP rate: 1.0000
+	* DIS: 1.0000
+	* Accuracy: 0.7264
+* Pixel-level:
+	* TP rate: 0.9726
+	* FP rate: 1.0000
+	* DIS: 1.0004
+	* Accuracy: 0.4092
+------------------------------------------------------------------------------------------------------------------------
+
+Evaluating video temporal_aling_obj-video03 (201 frames -> positives: 201, negatives: 0)
+Video output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video03.avi
+Frames output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video03/
+Computed metrics:
+mean_loss: 0.0000
+* Frame-level:
+	* TP rate: 1.0000
+	* FP rate: 0.0000
+	* DIS: 0.0000
+	* Accuracy: 1.0000
+* Pixel-level:
+	* TP rate: 1.0000
+	* FP rate: 0.0000
+	* DIS: 0.0000
+	* Accuracy: 1.0000
+------------------------------------------------------------------------------------------------------------------------
+
+Evaluating video temporal_aling_obj-video08 (201 frames -> positives: 115, negatives: 86)
+Video output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video08.avi
+Frames output path: /home/rafael.padilla/ablation_tcf-lmo/TCF-LMO/testing_logs/testing_results_modification1/temporal_aling_obj-video08/
+Computed metrics:
+mean_loss: 0.1306
+* Frame-level:
+	* TP rate: 0.7565
+	* FP rate: 0.0000
+	* DIS: 0.2435
+	* Accuracy: 0.8607
+* Pixel-level:
+	* TP rate: 1.0000
+	* FP rate: 0.1144
+	* DIS: 0.1144
+	* Accuracy: 0.8873
+------------------------------------------------------------------------------------------------------------------------
+############################################################
+EVALUATING FRAME_LEVEL METRIC WITH TEMPORAL ALIGNMENT
+############################################################
+vid sum_tp sum_fp sum_tn sum_fn sum_gt_pos sum_gt_neg TPR FPR DIS
+temporal_aling_obj-video01 201 0 0 0 201 0 1.0 0 0.0
+temporal_aling_obj-video02 14 0 0 187 201 0 0.06965174129353234 0 0.9303482587064676
+temporal_aling_obj-video03 201 0 0 0 201 0 1.0 0 0.0
+temporal_aling_obj-video04 201 0 0 0 201 0 1.0 0 0.0
+temporal_aling_obj-video07 201 0 0 0 201 0 1.0 0 0.0
+temporal_aling_obj-video08 87 0 86 28 115 86 0.7565217391304347 0.0 0.24347826086956526
+temporal_aling_obj-video09 146 55 0 0 146 55 1.0 1.0 1.0
+temporal_aling_obj-video10 108 0 43 50 158 43 0.6835443037974683 0.0 0.31645569620253167
+temporal_aling_obj-video11 124 0 47 30 154 47 0.8051948051948052 0.0 0.19480519480519476
+temporal_aling_obj-video12 103 0 57 41 144 57 0.7152777777777778 0.0 0.2847222222222222
+temporal_aling_obj-video13 135 0 53 13 148 53 0.9121621621621622 0.0 0.08783783783783783
+temporal_aling_obj-video17 87 0 30 84 171 30 0.5087719298245614 0.0 0.49122807017543857
+temporal_aling_obj-video18 0 0 52 149 149 52 0.0 0.0 1.0
+temporal_aling_obj-video19 0 0 50 151 151 50 0.0 0.0 1.0
+temporal_aling_obj-video20 168 33 0 0 168 33 1.0 1.0 1.0
+temporal_aling_obj-video21 121 80 0 0 121 80 1.0 1.0 1.0
+temporal_aling_obj-video22 145 0 33 23 168 33 0.8630952380952381 0.0 0.13690476190476186
+temporal_aling_obj-video25 0 0 0 201 201 0 0.0 0 1.0
+temporal_aling_obj-video26 64 0 47 90 154 47 0.4155844155844156 0.0 0.5844155844155844
+temporal_aling_obj-video27 201 0 0 0 201 0 1.0 0 0.0
+temporal_aling_obj-video28 21 0 0 180 201 0 0.1044776119402985 0 0.8955223880597015
+temporal_aling_obj-video29 0 0 50 151 151 50 0.0 0.0 1.0
+temporal_aling_obj-video30 141 0 57 3 144 57 0.9791666666666666 0.0 0.02083333333333337
+temporal_aling_obj-video31 150 51 0 0 150 51 1.0 1.0 1.0
+temporal_aling_obj-video32 107 0 52 42 149 52 0.7181208053691275 0.0 0.2818791946308725
+temporal_aling_obj-video33 151 50 0 0 151 50 1.0 1.0 1.0
+temporal_aling_obj-video34 136 11 54 0 136 65 1.0 0.16923076923076924 0.16923076923076924
+temporal_aling_obj-video35 157 44 0 0 157 44 1.0 1.0 1.0
+temporal_aling_obj-video36 149 52 0 0 149 52 1.0 1.0 1.0
+temporal_aling_obj-video37 125 0 53 23 148 53 0.8445945945945946 0.0 0.15540540540540537
+temporal_aling_obj-video38 26 0 70 105 131 70 0.1984732824427481 0.0 0.8015267175572519
+temporal_aling_obj-video39 139 62 0 0 139 62 1.0 1.0 1.0
+temporal_aling_obj-video40 145 0 52 4 149 52 0.9731543624161074 0.0 0.02684563758389258
+temporal_aling_obj-video41 136 65 0 0 136 65 1.0 1.0 1.0
+temporal_aling_obj-video44 180 21 0 0 180 21 1.0 1.0 1.0
+temporal_aling_obj-video45 181 20 0 0 181 20 1.0 1.0 1.0
+temporal_aling_obj-video46 99 0 26 76 175 26 0.5657142857142857 0.0 0.4342857142857143
+temporal_aling_obj-video47 148 37 16 0 148 53 1.0 0.6981132075471698 0.6981132075471698
+temporal_aling_obj-video48 136 0 44 21 157 44 0.8662420382165605 0.0 0.13375796178343946
+temporal_aling_obj-video49 147 31 23 0 147 54 1.0 0.5740740740740741 0.5740740740740741
+temporal_aling_obj-video53 176 0 22 3 179 22 0.9832402234636871 0.0 0.016759776536312887
+temporal_aling_obj-video54 124 0 57 20 144 57 0.8611111111111112 0.0 0.13888888888888884
+temporal_aling_obj-video55 67 52 0 82 149 52 0.44966442953020136 1.0 1.141432976623822
+temporal_aling_obj-video56 125 76 0 0 125 76 1.0 1.0 1.0
+temporal_aling_obj-video57 159 26 16 0 159 42 1.0 0.6190476190476191 0.6190476190476191
+temporal_aling_obj-video58 121 4 47 29 150 51 0.8066666666666666 0.0784313725490196 0.20863666498892494
+temporal_aling_obj-video59 117 84 0 0 117 84 1.0 1.0 1.0
+
+
+Mean values: mean TPR: 0.7676687274679245 mean FPR: 0.34338078813720535  mean DIS: 0.5656688556748254 
+OVERALL 	 TPR: 0.760461373390558 	 FPR: 0.4289301858362632 	 DIS: 0.49128388733955947
+############################################################
+EVALUATING PIXEL_LEVEL METRIC WITH TEMPORAL ALIGNMENT
+############################################################
+vid sum_tp sum_fp sum_tn sum_fn sum_gt_pos sum_gt_neg TPR FPR DIS
+temporal_aling_obj-video01 201 0 0 0 201 0 1.0 0.0 0.0
+temporal_aling_obj-video02 187 40 0 14 201 0 0.9303482587064676 0.19900497512437812 0.21084199104892629
+temporal_aling_obj-video03 201 0 0 0 201 0 1.0 0.0 0.0
+temporal_aling_obj-video04 201 0 0 0 201 0 1.0 0.0 0.0
+temporal_aling_obj-video07 201 201 0 0 201 0 1.0 1.0 1.0
+temporal_aling_obj-video08 115 23 66 0 115 86 1.0 0.11442786069651742 0.11442786069651742
+temporal_aling_obj-video09 142 201 0 4 146 55 0.9726027397260274 1.0 1.0003752345347818
+temporal_aling_obj-video10 155 62 43 3 158 43 0.9810126582278481 0.30845771144278605 0.3090415488184292
+temporal_aling_obj-video11 154 201 0 0 154 47 1.0 1.0 1.0
+temporal_aling_obj-video12 143 1 57 1 144 57 0.9930555555555556 0.004975124378109453 0.00854266768753379
+temporal_aling_obj-video13 148 5 48 0 148 53 1.0 0.024875621890547265 0.024875621890547265
+temporal_aling_obj-video17 171 6 25 0 171 30 1.0 0.029850746268656716 0.029850746268656716
+temporal_aling_obj-video18 145 0 52 4 149 52 0.9731543624161074 0.0 0.02684563758389258
+temporal_aling_obj-video19 140 12 42 11 151 50 0.9271523178807947 0.05970149253731343 0.09418626758356911
+temporal_aling_obj-video20 168 201 0 0 168 33 1.0 1.0 1.0
+temporal_aling_obj-video21 121 201 0 0 121 80 1.0 1.0 1.0
+temporal_aling_obj-video22 168 17 16 0 168 33 1.0 0.0845771144278607 0.0845771144278607
+temporal_aling_obj-video25 123 28 0 78 201 0 0.6119402985074627 0.13930348258706468 0.41230545980299826
+temporal_aling_obj-video26 154 5 43 0 154 47 1.0 0.024875621890547265 0.024875621890547265
+temporal_aling_obj-video27 201 201 0 0 201 0 1.0 1.0 1.0
+temporal_aling_obj-video28 102 10 0 99 201 0 0.5074626865671642 0.04975124378109453 0.49504362573555216
+temporal_aling_obj-video29 0 22 50 151 151 50 0.0 0.10945273631840796 1.0059721176491856
+temporal_aling_obj-video30 144 128 57 0 144 57 1.0 0.6368159203980099 0.6368159203980099
+temporal_aling_obj-video31 146 201 0 4 150 51 0.9733333333333334 1.0 1.0003554923681437
+temporal_aling_obj-video32 122 14 48 27 149 52 0.8187919463087249 0.06965174129353234 0.19413326296078476
+temporal_aling_obj-video33 143 201 0 8 151 50 0.9470198675496688 1.0 1.0014024637649213
+temporal_aling_obj-video34 136 18 47 0 136 65 1.0 0.08955223880597014 0.08955223880597014
+temporal_aling_obj-video35 153 201 0 4 157 44 0.9745222929936306 1.0 1.0003245041256874
+temporal_aling_obj-video36 149 201 0 0 149 52 1.0 1.0 1.0
+temporal_aling_obj-video37 148 10 45 0 148 53 1.0 0.04975124378109453 0.04975124378109453
+temporal_aling_obj-video38 126 182 12 5 131 70 0.9618320610687023 0.9054726368159204 0.9062767168942601
+temporal_aling_obj-video39 139 145 0 0 139 62 1.0 0.7213930348258707 0.7213930348258707
+temporal_aling_obj-video40 149 28 24 0 149 52 1.0 0.13930348258706468 0.13930348258706468
+temporal_aling_obj-video41 136 201 0 0 136 65 1.0 1.0 1.0
+temporal_aling_obj-video44 180 196 0 0 180 21 1.0 0.9751243781094527 0.9751243781094527
+temporal_aling_obj-video45 181 165 0 0 181 20 1.0 0.8208955223880597 0.8208955223880597
+temporal_aling_obj-video46 166 0 26 9 175 26 0.9485714285714286 0.0 0.05142857142857138
+temporal_aling_obj-video47 148 201 0 0 148 53 1.0 1.0 1.0
+temporal_aling_obj-video48 157 115 43 0 157 44 1.0 0.572139303482587 0.572139303482587
+temporal_aling_obj-video49 147 37 17 0 147 54 1.0 0.18407960199004975 0.18407960199004975
+temporal_aling_obj-video53 153 201 0 26 179 22 0.8547486033519553 1.0 1.0104939229051344
+temporal_aling_obj-video54 144 3 57 0 144 57 1.0 0.014925373134328358 0.014925373134328358
+temporal_aling_obj-video55 70 201 0 79 149 52 0.4697986577181208 1.0 1.131862828861124
+temporal_aling_obj-video56 125 201 0 0 125 76 1.0 1.0 1.0
+temporal_aling_obj-video57 159 201 0 0 159 42 1.0 1.0 1.0
+temporal_aling_obj-video58 132 111 19 18 150 51 0.88 0.5522388059701493 0.565126268031611
+temporal_aling_obj-video59 92 201 0 25 117 84 0.7863247863247863 1.0 1.022573761123934
+
+
+Mean values: mean TPR: 0.9257802522299527 mean FPR: 0.5080978088281994  mean DIS: 0.5516961576082055 
+OVERALL 	 TPR: 0.9235515021459227 	 FPR: 0.5080978088281994 	 DIS: 0.5138168507942906
