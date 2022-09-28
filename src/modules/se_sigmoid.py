@@ -34,13 +34,11 @@ class StructuringElementSigmoid(Module):
         self.one_padding = nn.ConstantPad2d(max_radius[0], 1.)
 
     def get_kernel(self):
-        # kernel = 1. / (1. + torch.exp(self.gamma * (self.X**2 + self.Y**2 - self.radius**2)))
-        # OU
         kernel = torch.sigmoid(-self.gamma * (self.X**2 + self.Y**2 - self.radius**2))
         return kernel
 
     def forward(self, x):
-        # generate kernel
+        # Generate kernel
         kernel = self.get_kernel()
         # Apply convolution using the kernel
         padded = self.one_padding(x)
