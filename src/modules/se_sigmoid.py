@@ -30,13 +30,6 @@ class StructuringElementSigmoid(Module):
         xs = torch.arange(-max_radius[1], max_radius[1] + 1, dtype=torch.float32)
         ys = torch.arange(-max_radius[0], max_radius[0] + 1, dtype=torch.float32)
         X, Y = torch.meshgrid(xs, ys)
-        # self.X = self.X.to(device).unsqueeze(0).unsqueeze(0)
-        # self.Y = self.Y.to(device).unsqueeze(0).unsqueeze(0)
-        self.register_buffer('X', X.unsqueeze(0).unsqueeze(0))
-        self.register_buffer('Y', Y.unsqueeze(0).unsqueeze(0))
-        # # Define padding to be applied in the input
-        # self.replication_pad = nn.ReplicationPad2d(
-        #     (max_radius[1], max_radius[1], max_radius[0], max_radius[0]))
         self.convolution = F.conv2d
         self.one_padding = nn.ConstantPad2d(max_radius[0], 1.)
 
@@ -50,10 +43,6 @@ class StructuringElementSigmoid(Module):
         # generate kernel
         kernel = self.get_kernel()
         # Apply convolution using the kernel
-        # Com zero padding: Aparece bordas brancas
-        # out = self.convolution(x, kernel, padding=(20, 20))
-
-        # Com one padding: Sem bordas brancas
         padded = self.one_padding(x)
         out = self.convolution(padded, kernel)
         return out
