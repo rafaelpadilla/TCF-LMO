@@ -16,16 +16,16 @@ from test import create_image_strips
 import src.utils.utils_tensorboard as tb_utils
 
 # Definitions
-fold_number = "2"
+fold_number = "1"
 dir_save = "/home/rafael.padilla/thesis/tcf-lmo/results_luiz_apr_11/" # directory where the results will be saved
 refs = f"/nfs/proc/luiz.tavares/VDAO_Database/data/test/ref/fold0{fold_number}/" # directory where the reference frames are
 tars = f"/nfs/proc/luiz.tavares/VDAO_Database/data/test/tar/fold0{fold_number}/" # directory where the target frames are
 pretrained_model_path = f"/home/rafael.padilla/thesis/tcf-lmo/TCF-LMO/pretrained_models/temporal_alignment_fold_{fold_number}/" # Pretrained downloaded models
-device = 0 # GPU number 0, 1, 2 
+device = 1 # GPU number 0, 1, 2 
 # End definitions
 
-save_videos = False
-save_frames = False
+save_videos = True
+save_frames = True
 seed = 123
 fps = 5
 quality = 6
