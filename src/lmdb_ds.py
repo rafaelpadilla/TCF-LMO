@@ -52,9 +52,9 @@ class LMDBDataset(Dataset):
         assert os.path.isdir(self.lmdb_path)
         assert load_mode in ['block', 'keyframe']
 
-        # Se for train e load_mode=>'keyframe', janela central )half_window_size) é o frame do meio do batch (7)
-        # Se for train e load_mode=>'block', não se usa janela central (half_window_size)
-        # Se for val ou teste, load_mode=>'keyframe' cada batch tem 1 imagem :. janela central (half_window_size) é o próprio frame único
+        # If train and load_mode=>'keyframe', central window (half_window_size) is the central frame of the batch (7)
+        # If train and load_mode=>'block', it won't use the central frame window (half_window_size)
+        # If val or test, load_mode=>'keyframe' each batch has a single frame only :. central frame (half_window_size) é o is the frame itself
         self.half_window_size = 7 if type_dataset == 'train' else 0
 
         self.type_dataset = type_dataset
@@ -62,7 +62,7 @@ class LMDBDataset(Dataset):
         self.transformations = transformations
         self.load_mode = load_mode
 
-        # load auxiliary data only
+        # Load auxiliary data only
         self.keys_ds = utils_dataset.get_keys_lmdb(fold_number,
                                                    lmdb_path=self.lmdb_path,
                                                    type_dataset=type_dataset)
@@ -85,25 +85,24 @@ class LMDBDataset(Dataset):
             self.db = lmdb.open(self.lmdb_path, readonly=True, lock=False)
 
         key = self.keys_ds[idx]['lmdb_key']
-        # print(idx)
 
         with self.db.begin(write=False) as tx:
             buff = tx.get(key)
 
         ref, tar, bboxes, classes = self.decode(buff)
-        # Aplica transformações
+        # Apply transformations
         ref = torch.stack([self.transformations(r) for r in ref])
         tar = torch.stack([self.transformations(t) for t in tar])
-        # Fica somente com os frames de acordo com o load_mode
+        # Keep only frames that are according to the load_mode
         if self.load_mode == 'keyframe':
-            # Obtém apenas o frame central (half_window_size)
+            # Keep only the central frame (half_window_size)
             ref = ref[self.half_window_size]
             tar = tar[self.half_window_size]
             bboxes = bboxes[self.half_window_size]
             classes = classes[self.half_window_size]
             assert classes == self.keys_ds[idx]['class_keyframe']
             return ref, tar, classes, bboxes
-        # Se for modo 'block', pega todos os frames do bloco
+        # If blocking mode, get all frames within the block
         elif self.load_mode == 'block':
             return ref, tar, classes, bboxes
 
