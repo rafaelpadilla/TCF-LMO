@@ -1,3 +1,4 @@
+import json
 import os
 from PIL import Image
 import imageio
@@ -20,14 +21,11 @@ dir_save = "/home/rafael.padilla/thesis/tcf-lmo/results_luiz_apr_11/" # director
 refs = f"/nfs/proc/luiz.tavares/VDAO_Database/data/test/ref/fold0{fold_number}/" # directory where the reference frames are
 tars = f"/nfs/proc/luiz.tavares/VDAO_Database/data/test/tar/fold0{fold_number}/" # directory where the target frames are
 pretrained_model_path = f"/home/rafael.padilla/thesis/tcf-lmo/TCF-LMO/pretrained_models/temporal_alignment_fold_{fold_number}/" # Pretrained downloaded models
-
-#./pretrained_models/temporal_pretrained_models/temporal_alignment_fold_{fold_number}" # Pretrained downloaded models
-
 device = 0 # GPU number 0, 1, 2 
 # End definitions
 
-save_videos = True
-save_frames = True
+save_videos = False
+save_frames = False
 seed = 123
 fps = 5
 quality = 6
@@ -191,7 +189,6 @@ def evaluate_sequential_aligned_frames(ref_paths_frames, tar_paths_frames, vid_b
                 torch.uint8).cpu().numpy()
             class_out = (outputs > .5).item()
             metrics_vid['pred_labels'].append(class_out * 1)
-            metrics_vid['pred_blobs'].append(output_frame)
             # generate frames to be included in the video
             if save_videos or save_frames:
                 tcm = (hooks_dict['hook_sum_pixels_on'].input[0].squeeze() * 255).to(
@@ -270,6 +267,12 @@ def evaluate_sequential_aligned_frames(ref_paths_frames, tar_paths_frames, vid_b
 
     if save_videos:
         writer.close()
+
+    path_save_results = Path(dir_save) / f"results_{vid_basename}.json"
+    with open(str(path_save_results), 'w') as json_file:
+        json.dump(metrics_vid, json_file)
+
+    
 
 
 for start in np.arange(0, 1206, 201):
