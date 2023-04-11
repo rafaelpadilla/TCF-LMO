@@ -15,12 +15,15 @@ from test import create_image_strips
 import src.utils.utils_tensorboard as tb_utils
 
 # Definitions
-fold_number = "1"
-dir_save = "/home/rafael/del/luiz/resultados" # directory where the results will be saved
-refs = f"/home/rafael/del/luiz/fold0{fold_number}/ref/" # directory where the reference frames are
-tars = f"/home/rafael/del/luiz/fold0{fold_number}/tar/" # directory where the target frames are
-pretrained_model_path = f"./pretrained_models/temporal_pretrained_models/temporal_alignment_fold_{fold_number}" # Pretrained downloaded models
-device = 123 # GPU number 0, 1, 2 
+fold_number = "2"
+dir_save = "/home/rafael.padilla/thesis/tcf-lmo/results_luiz_apr_11/" # directory where the results will be saved
+refs = f"/nfs/proc/luiz.tavares/VDAO_Database/data/test/ref/fold0{fold_number}/" # directory where the reference frames are
+tars = f"/nfs/proc/luiz.tavares/VDAO_Database/data/test/tar/fold0{fold_number}/" # directory where the target frames are
+pretrained_model_path = f"/home/rafael.padilla/thesis/tcf-lmo/TCF-LMO/pretrained_models/temporal_alignment_fold_{fold_number}/" # Pretrained downloaded models
+
+#./pretrained_models/temporal_pretrained_models/temporal_alignment_fold_{fold_number}" # Pretrained downloaded models
+
+device = 0 # GPU number 0, 1, 2 
 # End definitions
 
 save_videos = True
@@ -94,7 +97,6 @@ def evaluate_sequential_aligned_frames(ref_paths_frames, tar_paths_frames, vid_b
                                         **loader_params,
                                         batch_size=model.temporal_consistency.voting_window)
     count_frames = 0
-
     metrics_vid = {
         'pred_labels': [],
         'pred_blobs': [],
@@ -111,7 +113,6 @@ def evaluate_sequential_aligned_frames(ref_paths_frames, tar_paths_frames, vid_b
     count_samples = 0
     init_frame, central_frame, end_frame = 0, 0, 0
     voting_window = model.temporal_consistency.voting_window
-
 
     if save_videos:
         Path(dir_save).mkdir(exist_ok=True)
@@ -154,8 +155,7 @@ def evaluate_sequential_aligned_frames(ref_paths_frames, tar_paths_frames, vid_b
 
         init_frame = max(central_frame - voting_window // 2, 0)
         end_frame = min(central_frame + voting_window // 2, len(ds))
-        print(f"Init: {init_frame} - End: {end_frame} - Central: {central_frame}")
-
+       
         # clean the buffer => remove frames out of the voting window
         ids_to_remove = [i for i in buffer_frames if i < init_frame]
         for i in ids_to_remove:
