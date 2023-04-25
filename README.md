@@ -1,3 +1,24 @@
+
+If you use this code for your research, please consider citing:
+
+``` 
+@article{PADILLA2023116969,
+title = {Change detection in moving-camera videos with limited samples using twin-CNN features and learnable morphological operations},
+journal = {Signal Processing: Image Communication},
+volume = {115},
+pages = {116969},
+year = {2023},
+issn = {0923-5965},
+doi = {https://doi.org/10.1016/j.image.2023.116969},
+url = {https://www.sciencedirect.com/science/article/pii/S0923596523000516},
+author = {Rafael Padilla and Allan F. {da Silva} and Eduardo A.B. {da Silva} and Sergio L. Netto},
+}
+```
+Download the paper [preprint version](https://github.com/rafaelpadilla/TCF-LMO/raw/main/paper_preprint.pdf) or [published version ](https://authors.elsevier.com/c/1gyvY3I06IgrB4) (available until June, 2023).
+
+
+---------
+
 # Lightweight Change Detection in Moving-Camera Videos Using Twin-CNN Features and Learnable Morphological Operations.
 
 * [Overview](#overview)  
